@@ -3,7 +3,7 @@
 
 
 
-    <h2>Ecosystem</h2>
+
     <ul>
       <li>
         <a
