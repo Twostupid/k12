@@ -1,5 +1,7 @@
 <template>
-    <div>$END$</div>
+    <div>
+      <img src="http://yefengedu.com/static/img/bg_login.d936fa5.png" alt="">
+    </div>
 </template>
 
 <script>
