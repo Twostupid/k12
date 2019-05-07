@@ -8,7 +8,7 @@
           href="https://vuejs.org"
           target="_blank"
         >
-          Core Docs
+          啊啊啊
         </a>
       </li>
       <li>
@@ -16,7 +16,7 @@
           href="https://forum.vuejs.org"
           target="_blank"
         >
-          Forum
+          军努努局黁就水电费
         </a>
       </li>
       <li>
@@ -24,7 +24,7 @@
           href="https://chat.vuejs.org"
           target="_blank"
         >
-          Community Chat
+          随大头VR
         </a>
       </li>
       <li>
