@@ -22,7 +22,7 @@
 <style scoped>
   .bgb{
     width: 1200px;
-    height:650px;
+    height:651px;
     background-image: url("http://yefengedu.com/static/img/bg_login.d936fa5.png");
     background-repeat: no-repeat;
 
