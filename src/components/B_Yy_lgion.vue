@@ -11,10 +11,10 @@
           <div class="shur">
             <ul class="verify">
               <li>
-                <input type="text" placeholder="手机号码">
+                <input type="text" placeholder="手机号码" v-model="name">
               </li>
               <li>
-                <input class="tops" type="text" placeholder="验证码">
+                <input class="tops" type="text" placeholder="验证码" v-model="pass">
                 <button class="haoma">获取验证号码</button>
               </li>
             </ul>
@@ -24,7 +24,7 @@
               同意 <a href="">用户协议</a> 才可以注册
             </div>
 <!--      点击事件注册annu-->
-          <div class="nub">
+          <div class="nub" @click="resiger">
             注册
           </div>
 <!--            已用账号-->
@@ -43,25 +43,32 @@
         name: "T_Yy_lgion",
         data() {
             return {
-                msg: ""
+                msg: "",
+              name:'',
+              pass:''
             }
         },
+      methods:{
+        resiger(){
+          console.log(this.name,this.pass)
+          //正则判断号码
+          function codeVerification(phone){
+            let phoneCodeVerification = /^[1][3,4,5,7,8][0-9]{9}$/;
+            return phoneCodeVerification.test(phone);
+          }
+        }
+      },
         component: {}
     }
 </script>
 
 <style scoped>
-  *{
-    margin: 0px;
-    padding: 0px;
-  }
   .bgb{
     width: 100%;
     height:652px;
     background-image: url("http://yefengedu.com/static/img/bg_login.d936fa5.png");
     background-repeat: no-repeat;
     position: relative;
-
   }
   .frame{
     width: 350px;
