@@ -30,6 +30,7 @@ body {
 .header .container {
   width: 78%;
   height: 100%;
+  margin: auto;
 }
 
 .container .nav-bar {
@@ -37,6 +38,7 @@ body {
   height: 100%;
   overflow: hidden;
   text-align: center;
+
 }
 
 .nav-bar .logo, .el-menu {
@@ -321,6 +323,7 @@ body {
 .carousel-indicators{
 
 }
+
 
 
 

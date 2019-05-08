@@ -11,7 +11,9 @@ import '../node_modules/bootstrap3/dist/js/bootstrap.min.js'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+import axios from 'axios'
+Vue.prototype.$axios= axios;
+// Vue.use(axios);
 new Vue({
   el: '#app',
   router,

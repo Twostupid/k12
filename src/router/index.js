@@ -40,6 +40,18 @@ export default new Router({
       name: 'homep',
       component: (resolve) => require(['../components/B_ey_home.vue'],resolve)
     },
+    //新闻咨询
+    {
+      path:'/news',
+      name:'news',
+      component:(resolve) => require(['../components/B_dm_news.vue'],resolve)
+    },
+  //  忘记密码
+    {
+      path: '/forget',
+      name: 'forget',
+      component: (resolve) => require(['../components/B_Yy_forget.vue'],resolve)
+    },
 
   ]
 })

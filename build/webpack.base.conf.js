@@ -2,6 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
+var webpack = require('webpack')
 const vueLoaderConfig = require('./vue-loader.conf')
 
 const webpack = require('webpack')
@@ -24,6 +25,7 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
@@ -37,6 +39,8 @@ module.exports = {
       jQuery: 'jquery'
     })
   ],
+
+
   module: {
     rules: [
       {
