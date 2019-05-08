@@ -3,15 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import $ from 'jquery'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import $ from 'jquery'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 Vue.prototype.$axios = axios
 
 
 // import 'bootstrap/dist/js/bootstrap.min'
-import '../node_modules/bootstrap3/dist/css/bootstrap.css'
-import '../static/css/main.css'
+// import '../node_modules/bootstrap3/dist/css/bootstrap.css'
+// import '../static/css/main.css'
 
 Vue.config.productionTip = false
 
