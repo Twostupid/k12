@@ -7,9 +7,6 @@ import axios from 'axios'
 Vue.prototype.$axios = axios
 
 
-// import 'bootstrap/dist/js/bootstrap.min'
-// import '../node_modules/bootstrap3/dist/css/bootstrap.css'
-// import '../static/css/main.css'
 
 Vue.config.productionTip = false
 
