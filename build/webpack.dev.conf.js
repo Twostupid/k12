@@ -1,5 +1,10 @@
 'use strict'
 const utils = require('./utils')
+
+function require(webpack1) {
+  return undefined;
+}
+
 const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
