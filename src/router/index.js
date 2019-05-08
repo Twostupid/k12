@@ -35,6 +35,11 @@ export default new Router({
       name: 'login',
       component: (resolve) => require(['../components/B_Yy_resigrer.vue'],resolve)
     },
-
+    //新闻咨询
+    {
+      path:'/news',
+      name:'news',
+      component:(resolve) => require(['../components/B_dm_news.vue'],resolve)
+    }
   ]
 })

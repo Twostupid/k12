@@ -25,6 +25,7 @@ body {
 .header .container{
   width: 78%;
   height: 100%;
+  margin: auto;
 }
 .container .nav-bar{
   width: 100%;
@@ -159,6 +160,7 @@ border-radius: 30px;
   border-radius: 30px;
   margin-left: 20px;
 }
+
 
 
 
