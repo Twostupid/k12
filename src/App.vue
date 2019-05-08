@@ -9,7 +9,7 @@
           </router-link>
           <ul class="menus el-menu">
             <li class="el-menu-item">
-              <router-link to="/homep" class="rlStyle">首页</router-link>
+              <router-link to="/" class="rlStyle">首页</router-link>
             </li>
             <li class="el-menu-item">
               <router-link to="/building" class="rlStyle">积木编程</router-link>
@@ -54,8 +54,6 @@
 </template>
 <script>
 
-
-
   export default {
   name: 'App',
     components:{
@@ -66,5 +64,9 @@
 </script>
 
 <style>
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
 
 </style>
