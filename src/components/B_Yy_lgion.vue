@@ -25,7 +25,7 @@
           <div class="shur">
             <ul class="verify">
               <li>
-                <input type="text" placeholder="手机号码" v-model="name">
+                <input type="text" placeholder="手机号码" v-model="name" @input="nums">
               </li>
               <li>
                 <input class="tops" type="text" placeholder="验证码" v-model="pass">
@@ -75,6 +75,19 @@
             }
         },
       methods:{
+          //正则
+          nums(){
+            function codeVerification(phone){
+              let phoneCodeVerification = /^[1][3,4,5,7,8][0-9]{9}$/;
+              return phoneCodeVerification.test(phone);
+            }
+            if(!codeVerification(this.name)){
+
+            }else{
+              this.banban=true;
+            }
+
+          },
         //  注册时用户电话号判断
         resiger(){
           // console.log(this.name,this.pass)
@@ -88,8 +101,6 @@
             this.boor=true
           this.time()
           }else{
-
-
             //判断号码是否重复f返回true
             //axios 接口假的 /api 以解决跨域问题
 
@@ -99,7 +110,6 @@
             //     console.log(err)
             //   })
             // }
-
             this.banban=true;
             if(this.biubiu){
             //  进行判断验证码是否正确
@@ -110,8 +120,18 @@
               //     console.log(err)
               //   })
               // }
+              if(this.pass.length!=0){
+                //  返回true跳转完善个人中心页面
+                window.location.href="/login"
+              }else{
+                this.ming="请获取验证码";
+                this.boor=true;
+                this.time();
 
-            //  返回true跳转登录页面
+              }
+
+
+
 
 
             }else{
@@ -124,6 +144,7 @@
         },
         //  点击验证后
         haoma(){
+          console.log(this.banban)
           //如果号码未注册返回true进行获取验证
           if(this.banban){
             this.biubiu=true
