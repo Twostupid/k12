@@ -19,7 +19,7 @@
         <!--登录框-->
         <div class="frame">
           <div class="top">
-            <div class="xian"> <h2>用户注册</h2></div>
+            <div class="xian"> <span>用户注册</span></div>
           </div>
           <!--input 框-->
           <div class="shur">
@@ -223,7 +223,8 @@
     line-height: 60px;
     border-bottom: 3px solid #38adff;
   }
-  .xian h2{
+  .xian span{
+    font-size: 20px;
     color: #303133;
   }
   .verify{
@@ -258,7 +259,7 @@
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    right: 7%;
+    right: 10%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: none;

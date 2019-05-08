@@ -5,7 +5,7 @@
       <!--        登录框-->
       <div class="frame">
         <div class="top">
-          <div class="xian"> <h2>登录平台</h2></div>
+          <div class="xian"><span>登录平台</span></div>
         </div>
         <!--          input 框-->
         <div class="shur">
@@ -85,8 +85,9 @@
     line-height: 60px;
     border-bottom: 3px solid #38adff;
   }
-  .xian h2{
+  .xian span{
     color: #303133;
+    font-size: 20px;
   }
   .verify{
     width: 100%;
@@ -102,7 +103,7 @@
     /*background-color: #42b983;*/
   }
   .verify li input{
-    width: 72%;
+    width: 80%;
     padding: 10px;
     line-height: 1.2;
     font-size: 14px;
@@ -121,7 +122,7 @@
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    right: 2.6%;
+
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: none;
