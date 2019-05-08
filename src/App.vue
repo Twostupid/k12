@@ -14,7 +14,18 @@
   name: 'App',
     components:{
 
+    },
+    mounted(){
+      this.$axios.get('/api/course/categories?page=1&size=30').then(res => {
+        console.log(res.data)
+      }).catch(err => {
+        console.log(err)
+      })
     }
+
+
+
+
 
 }
 </script>

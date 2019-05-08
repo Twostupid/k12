@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// import $ from 'jquery' ;
 
 Vue.use(Router)
 
@@ -29,11 +30,16 @@ export default new Router({
       component: (resolve) => require(['../components/B_dm_building_jimn.vue'],resolve)
     },
     //登录
-
     {
       path: '/login',
       name: 'login',
       component: (resolve) => require(['../components/B_Yy_resigrer.vue'],resolve)
+    },
+  //  忘记密码
+    {
+      path: '/forget',
+      name: 'forget',
+      component: (resolve) => require(['../components/B_Yy_forget.vue'],resolve)
     },
 
   ]
