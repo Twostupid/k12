@@ -8,12 +8,19 @@ export default new Router({
   routes: [
     {
       path: '*',
-      redirect:'/'
+      redirect:'/building'
     },
+    // {
+    //   path: '/',
+    //   name: 'home',
+    //   component: (resolve) => require(['../components/B_Yy_lgion.vue'],resolve)
+    // },
+    //积木编程
+
     {
-      path: '/',
-      name: 'home',
-      component: (resolve) => require(['../components/B_Yy_lgion.vue'],resolve)
+      path: '/building',
+      name: 'building',
+      component: (resolve) => require(['../components/B_dm_building_jimn.vue'],resolve)
     },
 
   ]

@@ -1,13 +1,13 @@
 <template>
     <div>
-<!--      登录背景图-->
+      <!--登录背景图-->
       <div class="bgb">
-<!--        登录框-->
+        <!--登录框-->
         <div class="frame">
           <div class="top">
             <h2>用户注册</h2>
           </div>
-<!--          input 框-->
+          <!--input 框-->
           <div class="shur">
 
 
@@ -35,8 +35,12 @@
 </script>
 
 <style scoped>
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
   .bgb{
-    width: 1200px;
+    width: 100%;
     height:652px;
     background-image: url("http://yefengedu.com/static/img/bg_login.d936fa5.png");
     background-repeat: no-repeat;
@@ -47,7 +51,7 @@
     width: 350px;
     height: 365px;
     background-color: #fff;
-    margin-left: 66.6667%;
+    margin-left: 67.6667%;
     position: relative;
     top: 20%;
 
