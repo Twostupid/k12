@@ -17,17 +17,17 @@
             }
         },
         methods:{
-          getdata(){
-            this.$axios.get('/users/course/categories?page=1&size=30').then(res => {
-              console.log(res.data)
-            }).catch(err => {
-              console.log(err)
-            })
 
+          getdata(){
+            this.$axios.get('/api/course/categories?page=1&size=30').then(res => {
+              console.log(res)
+            })
           }
+
+
         },
       mounted(){
-        // this.getdata();
+        this.getdata();
       }
     }
 </script>

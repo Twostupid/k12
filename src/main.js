@@ -8,8 +8,8 @@ import '../static/css/main.css'
 Vue.config.productionTip = false
 
 import axios from 'axios'
-Vue.prototype.$http= axios;
-Vue.use(axios);
+Vue.prototype.$axios= axios;
+// Vue.use(axios);
 new Vue({
   el: '#app',
   router,
