@@ -98,6 +98,7 @@
     width: 100%;
     height: 38px;
     margin-top: 20px;
+    text-align: center;
     /*background-color: #42b983;*/
   }
   .verify li input{
