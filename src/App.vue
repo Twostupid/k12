@@ -40,22 +40,24 @@
       </div>
     </header>
     <router-link to="/home"></router-link>
+
+    <router-link to="/building"></router-link>
     <router-view></router-view>
   </div>
 </template>
 <script>
-  /*
-  登录页面
-   */
+/*
+登录页面
+ */
 
 
   export default {
-    name: 'App',
-    components: {
+  name: 'App',
+    components:{
       // Bd_Yy_lgion
     }
 
-  }
+}
 </script>
 
 <style>
