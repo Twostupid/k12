@@ -10,6 +10,7 @@ body {
   font-family: Roboto;
   background: #ffffff;
   width: 100%;
+  background-color: #ececec;
 }
 .el-menu-item .rlStyle{
   color: rgb(51, 51, 51);
@@ -21,6 +22,8 @@ body {
 .header{
   width: 100%;
   height: 65px;
+  background-color: white;
+  box-shadow: 1px 5px 10px #d6d6d6;
 }
 .header .container{
   width: 78%;

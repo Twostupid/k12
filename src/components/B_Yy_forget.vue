@@ -5,7 +5,7 @@
       <!--登录框-->
       <div class="frame">
         <div class="top">
-          <div class="xian"> <h2>重置/找回密码</h2></div>
+          <div class="xian"> <span>重置/找回密码</span></div>
         </div>
         <!--input 框-->
         <div class="shur">
@@ -75,7 +75,8 @@
     line-height: 60px;
     border-bottom: 3px solid #38adff;
   }
-  .xian h2{
+  .xian span{
+    font-size: 20px;
     color: #303133;
   }
   .verify{
@@ -107,7 +108,7 @@
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    right: 7%;
+    right:10%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: none;
@@ -122,6 +123,7 @@
     font-size: 18px;
     color: #ffffff;
     border-radius: 5px;
+    margin-top: 30px;
   }
 
 </style>

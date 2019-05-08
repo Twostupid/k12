@@ -52,16 +52,10 @@
   </div>
 </template>
 <script>
-/*
-登录页面
- */
-
 
   export default {
   name: 'App',
-    components:{
-      // Bd_Yy_lgion
-    }
+    components:{}
 
 }
 </script>
