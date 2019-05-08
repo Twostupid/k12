@@ -1,36 +1,27 @@
 <template>
   <div>
-    <!--      登录背景图-->
+    <!--登录背景图-->
     <div class="bgb">
-      <!--        登录框-->
+      <!--登录框-->
       <div class="frame">
         <div class="top">
-          <div class="xian"> <h2>登录平台</h2></div>
+          <div class="xian"> <h2>重置/找回密码</h2></div>
         </div>
-        <!--          input 框-->
+        <!--input 框-->
         <div class="shur">
           <ul class="verify">
             <li>
               <input type="text" placeholder="手机号码">
             </li>
             <li>
-              <input v-if="flag" class="tops" type="text" placeholder="密码">
-              <input v-else class="tops" type="text" placeholder="验证码">
-
-              <button v-if="!flag" class="haoma">获取验证号码</button>
+              <input class="tops" type="text" placeholder="验证码">
+              <button class="haoma">获取验证号码</button>
             </li>
           </ul>
-<div class="yan">
-<a href="" class="yan" @click.prevent="flag=!flag"> 验证码登录</a>
-</div>
+          <!--          用户须知-->
           <!--      点击事件注册annu-->
           <div class="nub">
-            登录
-          </div>
-          <!--            已用账号-->
-          <div class="deng">
-            <router-link to="register">注册</router-link>
-            <a href="" id="wang_i">忘记密码？</a>
+            下一步
           </div>
         </div>
       </div>
@@ -43,8 +34,7 @@
     name: "T_Yy_lgion",
     data() {
       return {
-        msg: "",
-        flag:true
+        msg: ""
       }
     },
     component: {}
@@ -61,7 +51,7 @@
   }
   .frame{
     width: 350px;
-    height: 365px;
+    height: 355px;
     background-color: #fff;
     margin-left: 67.6667%;
     position: relative;
@@ -91,22 +81,19 @@
   .verify{
     width: 100%;
     height: 101px;
-    /*background-color: red;*/
     list-style: none;
+    text-align: center;
   }
   .verify li{
     width: 100%;
     height: 38px;
     margin-top: 20px;
-    /*background-color: #42b983;*/
   }
   .verify li input{
-    width: 72%;
-    padding: 10px;
-    line-height: 1.2;
+    width: 80%;
+    padding:10px;
     font-size: 14px;
     color: #666666;
-
     border-radius: 3px;
     border: 1px solid #f1f1f1;
   }
@@ -120,7 +107,7 @@
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    right: 2.6%;
+    right: 7%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: none;
@@ -128,33 +115,13 @@
   .nub{
     margin: 0 auto;
     width: 80%;
+    /*padding: 0 10px;*/
     line-height: 35px;
     text-align: center;
     background-color: #38adff;
     font-size: 18px;
     color: #ffffff;
     border-radius: 5px;
-  }
-  .yan{
-    margin-bottom: 10px;
-    margin-left: 20px;
-    text-decoration: none;
-    color: #38adff;
-  }
-  .deng{
-    width:100%;
-    font-size: 14px;
-    margin-top: 20px;
-    text-decoration:none;
-    margin-left: 40px;
-  }
-  .deng a{
-    text-decoration:none;
-    color:#38adff ;
-  }
-  #wang_i{
-    margin-left: 170px;
-    color: red;
   }
 
 </style>
