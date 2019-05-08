@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <budilding></budilding>
+
+    <router-link to="/home"></router-link>
+    <router-view></router-view>
   </div>
 </template>
 <script>
-  import budilding from './components/B_dm_building_jimn'
-
+/*
+登录页面
+ */
 
 
   export default {
   name: 'App',
     components:{
-      budilding,
+      // Bd_Yy_lgion
     }
 
 }
