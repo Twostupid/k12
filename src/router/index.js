@@ -35,6 +35,11 @@ export default new Router({
       name: 'login',
       component: (resolve) => require(['../components/B_Yy_resigrer.vue'],resolve)
     },
+    {
+      path: '/homep',
+      name: 'homep',
+      component: (resolve) => require(['../components/B_ey_home.vue'],resolve)
+    },
 
   ]
 })

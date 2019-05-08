@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import '../node_modules/bootstrap3/dist/css/bootstrap.css'
 import '../static/css/main.css'
+import $ from 'jquery'
+import '../node_modules/bootstrap3/dist/js/bootstrap.min.js'
+
 
 Vue.config.productionTip = false
 
