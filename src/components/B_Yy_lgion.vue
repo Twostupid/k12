@@ -36,11 +36,13 @@
 
 <style scoped>
   .bgb{
-    width: 1200px;
+    width: 100%;
     height:652px;
     background-image: url("http://yefengedu.com/static/img/bg_login.d936fa5.png");
     background-repeat: no-repeat;
     position: relative;
+    top:-20px;
+    margin-top: 0;
 
   }
   .frame{

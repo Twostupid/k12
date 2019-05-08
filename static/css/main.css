@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul li{
+  list-style: none;
+}
+body {
+  font-size: 12px;
+  font-family: Roboto;
+  background: #ffffff;
+  width: 100%;
+}
+.el-menu-item .rlStyle{
+  color: rgb(51, 51, 51);
+  border-bottom-color: transparent;
+  text-decoration: none;
+
+}
+/*头*/
+.header{
+  width: 100%;
+  height: 65px;
+}
+.header .container{
+  width: 78%;
+  height: 100%;
+}
+.container .nav-bar{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.nav-bar .logo,.el-menu{
+  float:left;
+}
+.nav-bar .logo{
+  margin-top: 10px;
+  margin-right: 25px;
+}
+.nav-bar .el-menu{
+  overflow: hidden;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+}
+.el-menu .el-menu-item{
+  float:left;
+}
+.nav-bar .menus{
+  width: 810px;
+  flex-shrink: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-bottom: none;
+  background-color: inherit;
+}
+.menus .el-menu-item{
+  font-size: 17px;
+  color: #332c2f;
+  margin: 15px 25px;
+  padding: 0;
+  line-height: 30px;
+  height: 30px;
+}
+.menus .el-menu-item:hover{
+  border-bottom: 2px solid #FB5B62 !important;
+}
+.nav-bar .user-area{
+  /*width: 200px;*/
+  height: 65px;
+  border-bottom: none;
+  background-color: inherit;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+
+
+}
+/*注册*/
+.user-area .register{
+  background-color: #FB5B62 !important;
+  color: #fff !important;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 1px solid #FB5B62 !important;
+  color: #FB5B62 !important;
+  height: 35px;
+  line-height: 35px;
+  width: 80px;
+border-radius: 30px;
+  font-size: 14px !important;
+
+}
+/*登录注册链接*/
+.ulinkr{
+  color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  text-decoration: none;
+
+}
+.ulinkr:hover{
+  text-decoration: none;
+  color: white;
+
+}
+.ulink{
+  text-decoration: none;
+  color: #fb5b62;
+}
+.ulink:hover{
+  text-decoration: none;
+  color: #fb5b62;
+
+}
+.ulink:visited,.ulink:active{
+  text-decoration: none;
+  color: #fb5b62;
+}
+.ulinkr:visited,.ulinkr:active{
+  text-decoration: none;
+  color: white;
+}
+
+ .user-area .el-menu-item:hover {
+  background: none;
+}
+.btn-hover:hover{
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+.btn-hover{
+
+}
+.user-area .el-menu-item{
+  margin-top:4px;
+
+}
+
+/*登录按钮*/
+.user-area .login-button{
+  border: 1px solid #fb5b63 !important;
+  height: 35px;
+  line-height: 35px;
+
+  display: inline-block;
+  background: #fff;
+  color: #fb5b62 !important;
+  width: 80px;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+
+
+
+
