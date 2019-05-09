@@ -210,7 +210,9 @@
             modifier: 3,
             slideShadows: false,
           },
-            loop:true,
+
+
+          loop:true,
           disableOnInteraction:true,
           autoplay:2000,
           slidesPerView:'auto',
