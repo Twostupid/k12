@@ -156,6 +156,27 @@
           闻名世界的亿万富翁在讲到学习经历时多数都提及过学习编程的经历。数不清的科学界大佬，在小学二三年级就开始学习编程。孩子学编程不一定就要去做程序员，但是学了编程的孩子会比其他人多一种思考问题的方式。
         </p>
       </div>
+      <div class="swiperBox" style=" width: 100%;
+    height: 500px;background-color: #FB6971">
+        <swiper :options="swiperOption" ref="mySwiper" style="width: 75%;
+    height: 400px;">
+          <!-- 这部分放置需要渲染的内容 -->
+          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/1.png)
+ "></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/2.png)"></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color: white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/3.png)"></div></swiper-slide>
+          <swiper-slide  style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/4.png)"></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color: white"><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/5.png)"></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/6.png)"></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/7.png)"></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/8.png)"></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/9.png)"></div></swiper-slide>
+          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/10.png)"></div></swiper-slide>
+
+
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+      </div>
 
 
     </section>
@@ -164,11 +185,64 @@
 
 <script>
 
+  import { swiper,swiperSlide } from 'vue-awesome-swiper'
   export default{
-    name: "B_ey_home",
+    name:'B_ey_home',
+
+    components:{
+      swiper,
+      swiperSlide
+    },
+    data(){
+      return {
+        swiperOption:{
+          notNextTick:true,
+          pagination:{
+            el:'.swiper-pagination'
+          },
+          effect:'coverflow',
+          slidesPerView: 3,
+          centeredSlides: true,
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 80,
+            depth: 60,
+            modifier: 3,
+            slideShadows: false,
+          },
+            loop:true,
+          disableOnInteraction:true,
+          autoplay:2000,
+          slidesPerView:'auto',
+          centeredSlides:true,
+          paginationClickable:true,
+          spaceBetween:30,
+          onSlideChangeEnd:swiper => {
+            //这个位置放置swiper的回调方法
+            this.page = swiper.realIndex+1;
+            this.index = swiper.realIndex;
+          }
+        }
+      }
+    },
+    computed:{
+      //定义这个swiper对象
+      swiper(){
+        return this.$refs.mySwiper.swiper;
+      }
+    },
+ mounted(){
+      //这边就可以使用swiper这个对象或使用swiper官网中的方法
+      var that=this;
+      this.swiper.slideTo(0,0,false);
+      //自动播放
+      setInterval(function(){
+        that.swiper.slideNext()
+      },2000)
+    },
   }
 </script>
 
 <style scoped>
-  　
+  　　
 </style>

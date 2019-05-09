@@ -12,6 +12,7 @@ import '../node_modules/bootstrap3/dist/js/bootstrap.min.js'
 import axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import '../node_modules/swiper/dist/js/swiper.min.js'
 Vue.use(VueAwesomeSwiper)
 Vue.prototype.$axios= axios;
 

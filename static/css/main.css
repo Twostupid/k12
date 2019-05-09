@@ -494,7 +494,27 @@ body {
   margin-top: 30px;
   margin-bottom: 50px;
 }
+/*第二个轮播图*/
+  .swiperBox{
+    width: 100%;
+  height: 500px;
+  }　
 
+
+  　　　
+  　　
+　　.page {
+  　　　　width: 100%;
+  　　　　height: 300px;
+  　　　　background:green
+  }
+.swiper-slide{
+  width: 100%;
+  height: 100%;
+  background-position: 8% 40%;
+
+  background-repeat: no-repeat;
+}
 
 
 
