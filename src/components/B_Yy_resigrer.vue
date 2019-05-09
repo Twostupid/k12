@@ -2,6 +2,12 @@
   <div>
     <!--      登录背景图-->
     <div class="bgb">
+<!--      弹出框-->
+          <transition name="my">
+      <div v-show="boor"  class="tan">
+        <span class="glyphicon glyphicon-remove-sign hs" ><span class="zi">{{msgs}}</span></span>
+      </div>
+          </transition>
       <!--        登录框-->
       <div class="frame">
         <div class="top">
@@ -11,10 +17,10 @@
         <div class="shur">
           <ul class="verify">
             <li>
-              <input type="text" placeholder="手机号码">
+              <input type="text" placeholder="手机号码" v-model="name">
             </li>
             <li>
-              <input v-if="flag" class="tops" type="text" placeholder="密码">
+              <input v-if="flag" class="tops" type="text" placeholder="密码" v-model="pwss">
               <input v-else class="tops" type="text" placeholder="验证码">
 
               <button v-if="!flag" class="haoma">获取验证号码</button>
@@ -23,8 +29,8 @@
 <div class="yan">
 <a href="" class="yan" @click.prevent="flag=!flag"> 验证码登录</a>
 </div>
-          <!--      点击事件注册annu-->
-          <div class="nub">
+          <!--      点击事件登录annu-->
+          <div class="nub" @click="login">
             登录
           </div>
           <!--            已用账号-->
@@ -44,7 +50,38 @@
     data() {
       return {
         msg: "",
-        flag:true
+        flag:true,
+        name:'',
+        pwss:'',
+        boor:false,
+        msgs:'',
+      }
+    },
+    methods:{
+      //登录注册
+      login(){
+        //判断电话号码
+        function codeVerification(phone){
+          let phoneCodeVerification = /^[1][3,4,5,7,8][0-9]{9}$/;
+          return phoneCodeVerification.test(phone);
+        }
+        //判断密码账号不为空
+        if(!codeVerification(this.name)&&this.pwss==0){
+        this.boor=true;
+          this.msgs='账号验证码不能为空'
+          this.time()
+        }else{
+          console.log(123)
+
+        }
+      },
+      time(){
+        let times=setInterval(() => {
+          this.boor=false;
+          // this.flay=false
+          clearInterval(times);
+          //此时的this指向是该vue组件，不管在哪个地方使用，指向都是该vue组件。
+        }, 3000)
       }
     },
     component: {}
@@ -157,6 +194,45 @@
   #wang_i{
     margin-left: 170px;
     color: red;
+  }
+  .tan{
+
+    width: 350px;
+    height: 45px;
+    background-color: red;
+    opacity: 0.5;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    margin-left:-175px;
+    z-index: 100;
+
+  }
+  .hs{
+    line-height: 44px;
+    font-size: 14px;
+    color: white;
+    margin-left: 40px;
+  }
+  .zi{
+    margin-left: 10px;
+  }
+  .v-enter, .v-leave-to{
+    opacity: 0;
+    transform:translateX(500px);
+  }
+  .v-enter-active, .v-leave-active{
+    transition:all .3s;
+
+  }
+  .my-enter, .my-leave-to{
+    opacity: 0;
+    transform:translateY(-200px);
+    color: pink;
+  }
+  .my-enter-active, .my-leave-active{
+    transition:all 1.3s;
+
   }
 
 </style>
