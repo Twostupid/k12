@@ -14,7 +14,7 @@
 
         </div>
         <div class="pager">
-          <span>共  条</span>
+          <span>共{{count}}条</span>
           <div>
             <select >
               <option value="10">10</option>
