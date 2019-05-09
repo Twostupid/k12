@@ -151,22 +151,23 @@
     box-sizing: border-box;
   }
   .small_logo{
-    width: 39px;
-    height: 41px;
+    width: 35px;
+    height: 35px;
+    margin-top: -10px;
 
   }
   a{
     color: black;
   }
   .logo_title{
+    position: relative;
+    top: -20px;
     width: 460px;
     height: 45px;
   }
   .logo_title h3{
     display: inline-block;
     margin-left: 10px;
-    position: relative;
-    top: -15px;
   }
   .schema{
     font-size: 14px;

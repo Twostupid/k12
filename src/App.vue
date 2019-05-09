@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <!--lx-->
-    <header id="header" class="header">
+    <header id="header" class="header" >
       <div class="container">
         <nav class="nav-bar">
           <router-link to="/" class="logo">
-            <img src="http://yefengedu.com/static/img/logo.cf4591a.png">
+          <img src="http://yefengedu.com/static/img/logo.cf4591a.png">
           </router-link>
           <ul class="menus el-menu">
             <li class="el-menu-item">
@@ -29,17 +29,17 @@
           </ul>
           <ul class="user-area el-menu">
             <router-link to="/">
-              <li class="el-menu-item is-active text-active register  btn-hover">
-                <router-link to="/" class="ulinkr">注册
-                </router-link>
-              </li>
+            <li class="el-menu-item is-active text-active register  btn-hover">
+              <router-link to="/" class="ulinkr">注册
+              </router-link>
+            </li>
             </router-link>
             <router-link to="/login">
-              <li class="el-menu-item">
+            <li class="el-menu-item">
               <span class="login-button btn-hover">
                 <router-link class="ulink" to="/login">登录</router-link>
               </span>
-              </li>
+            </li>
             </router-link>
           </ul>
         </nav>
@@ -48,60 +48,23 @@
     <router-link to="/home"></router-link>
 
     <router-link to="/building"></router-link>
-
     <router-view></router-view>
-    <footer class="footer container">
-      <div class="container-1200">
-        <div class="row">
-          <div class="col"><img src="http://yefengedu.com/static/img/logo1.4a14481.png"></div>
-          <div class="col"><h2>帮助中心</h2>
-            <p>
-              <router-link to="/">了解晔枫</router-link>
-            </p>
-            <p>
-              <router-link to="/">加入晔枫</router-link>
-            </p>
-            <p>
-              <router-link to="/">常见问题</router-link>
-            </p>
-          </div>
-          <div lass="col"><h2>服务协议</h2>
-            <p>
-              <router-link to="">用户协议</router-link>
-            </p>
-            <p>
-              <router-link to="">免责声明</router-link>
-            </p>
-            <p>
-              <router-link to="">隐私政策</router-link>
-            </p>
-          </div>
-          <div class="col"><h2>微信公众号</h2>
-            <p>
-              <router-link to=""><img
-                src="http://yefengedu.com/static/img/gongzhonghao.8168dbd.png"
-                alt="gongzhonghao" width="110" height="110"></router-link>
-            </p>
-          </div>
-          <div class="col"><h2>客户服务</h2>
-            <h1 data-v-7dd795f5="">400-1168-805</h1>
-            <p data-v-7dd795f5="">(9:30-17:30)</p></div>
-        </div>
-      </div>
-    </footer>
+
   </div>
 </template>
 <script>
 
   export default {
-    name: 'App',
-    components: {}
+  name: 'App',
+    components:{
 
-  }
+    }
+
+}
 </script>
 
 <style>
-  * {
+  *{
     margin: 0px;
     padding: 0px;
   }
