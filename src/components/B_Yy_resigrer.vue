@@ -18,19 +18,21 @@
           <ul class="verify">
             <li>
               <input type="text" placeholder="手机号码" v-model="name">
+
             </li>
             <li>
               <input v-if="flag" class="tops" type="text" placeholder="密码" v-model="pwss">
-              <input v-else class="tops" type="text" placeholder="验证码">
+              <input v-else class="tops" type="text" placeholder="验证码" v-model="pwss">
 
-              <button v-if="!flag" class="haoma">获取验证号码</button>
+              <button  v-if="!flag" class="haomeds" :class="isok?haomas:haomed"  :disabled="!isok" @click="disw">{{shabi}}</button>
             </li>
           </ul>
 <div class="yan">
 <a href="" class="yan" @click.prevent="flag=!flag"> 验证码登录</a>
+
 </div>
           <!--      点击事件登录annu-->
-          <div class="nub" @click="login">
+          <div class="nub" @click="logins">
             登录
           </div>
           <!--            已用账号-->
@@ -55,23 +57,46 @@
         pwss:'',
         boor:false,
         msgs:'',
+        isok:true,
+        haomed:"haomed",
+        haomas:"haomas",
+        shabi:'验证码登录'
       }
     },
+
+    component: {},
     methods:{
-      //登录注册
-      login(){
+
+      // 登录注册
+      logins(){
         //判断电话号码
         function codeVerification(phone){
           let phoneCodeVerification = /^[1][3,4,5,7,8][0-9]{9}$/;
           return phoneCodeVerification.test(phone);
         }
         //判断密码账号不为空
-        if(!codeVerification(this.name)&&this.pwss==0){
+        console.log(this.pwss)
+        if(!codeVerification(this.name)||this.pwss==0){
+
         this.boor=true;
           this.msgs='账号验证码不能为空'
           this.time()
         }else{
-          console.log(123)
+        //  数据库请求 判断名字是否注册
+        //  如果没注册返回false
+        //   this.boor=true;
+        //   this.msgs='用户未注册'
+        //   this.time()
+        //  请求数据库 如果用户纯在 进行判断密码是否正确
+        //     this.boor=true;
+        //     this.msgs=''
+        //     this.time()
+        //登录成功后
+        //  給首页传值 进行切换组件 并且跳转
+          window.location.href="/homep"
+
+
+
 
         }
       },
@@ -82,9 +107,30 @@
           clearInterval(times);
           //此时的this指向是该vue组件，不管在哪个地方使用，指向都是该vue组件。
         }, 3000)
+      },
+    //  倒计时
+      disw(){
+        console.log(123)
+        let num=60
+        this.isok=false
+             let times=setInterval(() => {
+               num--
+               this.shabi="重新发送 ("+num+")"
+               if(num==0){
+                 clearInterval(times);
+                 this.flay=false;
+                 this.isok=true
+                 this.shabi='获取验证码'
+               }
+
+               //此时的this指向是该vue组件，不管在哪个地方使用，指向都是该vue组件。
+             }, 1000)
       }
+
+
+
+
     },
-    component: {}
   }
 </script>
 
@@ -159,7 +205,7 @@
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-
+    right: 10%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: none;
@@ -234,329 +280,51 @@
     transition:all 1.3s;
 
   }
+  haomas{
 
-</style>
-<!--<template>-->
-  <!--&lt;!&ndash;<div>&ndash;&gt;-->
-    <!--&lt;!&ndash;&lt;!&ndash;      登录背景图&ndash;&gt;&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="bgb">&ndash;&gt;-->
-      <!--&lt;!&ndash;&lt;!&ndash;        登录框&ndash;&gt;&ndash;&gt;-->
-      <!--&lt;!&ndash;<div class="frame">&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="top">&ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="xian"><span>登录平台</span></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;&lt;!&ndash;          input 框&ndash;&gt;&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="shur">&ndash;&gt;-->
-          <!--&lt;!&ndash;<ul class="verify">&ndash;&gt;-->
-            <!--&lt;!&ndash;<li>&ndash;&gt;-->
-              <!--&lt;!&ndash;<input type="text" placeholder="手机号码">&ndash;&gt;-->
-            <!--&lt;!&ndash;</li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li>&ndash;&gt;-->
-              <!--&lt;!&ndash;<input v-if="flag" class="tops" type="text" placeholder="密码">&ndash;&gt;-->
-              <!--&lt;!&ndash;<input v-else class="tops" type="text" placeholder="验证码">&ndash;&gt;-->
-
-              <!--&lt;!&ndash;<button v-if="!flag" class="haoma">获取验证号码</button>&ndash;&gt;-->
-            <!--&lt;!&ndash;</li>&ndash;&gt;-->
-          <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="yan">&ndash;&gt;-->
-<!--&lt;!&ndash;<a href="" class="yan" @click.prevent="flag=!flag"> 验证码登录</a>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--&lt;!&ndash;&lt;!&ndash;      点击事件注册annu&ndash;&gt;&ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="nub">&ndash;&gt;-->
-            <!--&lt;!&ndash;登录&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--&lt;!&ndash;&lt;!&ndash;            已用账号&ndash;&gt;&ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="deng">&ndash;&gt;-->
-            <!--&lt;!&ndash;<router-link to="register">注册</router-link>&ndash;&gt;-->
-            <!--&lt;!&ndash;<router-link to="forget" id="wang_i">忘记密码？</router-link>&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-  <!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--</template>-->
-
-<!--<script>-->
-  <!--export default {-->
-    <!--name: "T_Yy_lgion",-->
-    <!--data() {-->
-      <!--return {-->
-        <!--msg: "",-->
-        <!--flag:true-->
-      <!--}-->
-    <!--},-->
-    <!--component: {}-->
-  <!--}-->
-<!--</script>-->
-
-<!--<style scoped>-->
-  <!--.bgb{-->
-    <!--width: 100%;-->
-    <!--height:652px;-->
-    <!--background-image: url("http://yefengedu.com/static/img/bg_login.d936fa5.png");-->
-    <!--background-repeat: no-repeat;-->
-    <!--position: relative;-->
-  <!--}-->
-  <!--.frame{-->
-    <!--width: 350px;-->
-    <!--height: 365px;-->
-    <!--background-color: #fff;-->
-    <!--margin-left: 67.6667%;-->
-    <!--position: relative;-->
-    <!--top: 20%;-->
-  <!--}-->
-  <!--.top{-->
-    <!--width: 100%;-->
-    <!--height: 60px;-->
-    <!--text-align: center;-->
-  <!--}-->
-  <!--.shur{-->
-    <!--margin-top: 45px;-->
-    <!--width: 100%;-->
-    <!--height: 235px;-->
-  <!--}-->
-
-  <!--.xian{-->
-    <!--width: 200px;-->
-    <!--height: 100%;-->
-    <!--margin: 0 auto;-->
-    <!--line-height: 60px;-->
-    <!--border-bottom: 3px solid #38adff;-->
-  <!--}-->
-  <!--.xian span{-->
-    <!--color: #303133;-->
-    <!--font-size: 20px;-->
-  <!--}-->
-  <!--.verify{-->
-    <!--width: 100%;-->
-    <!--height: 101px;-->
-    <!--/*background-color: red;*/-->
-    <!--list-style: none;-->
-  <!--}-->
-  <!--.verify li{-->
-    <!--width: 100%;-->
-    <!--height: 38px;-->
-    <!--margin-top: 20px;-->
-    <!--text-align: center;-->
-  <!---->
-  <!--}-->
-  <!--.verify li input{-->
-    <!--width: 80%;-->
-    <!--padding: 10px;-->
-    <!--line-height: 1.2;-->
-    <!--font-size: 14px;-->
-    <!--color: #666666;-->
-
-    <!--border-radius: 3px;-->
-    <!--border: 1px solid #f1f1f1;-->
-  <!--}-->
-
-  <!--.haoma{-->
-    <!--position: absolute;-->
-    <!--width: 30%;-->
-    <!--line-height: 37px;-->
-    <!--border: none;-->
-    <!--background: #E51C23;-->
-    <!--font-size: 14px;-->
-    <!--text-align: center;-->
-    <!--color: #ffffff;-->
-
-    <!--border-top-right-radius: 3px;-->
-    <!--border-bottom-right-radius: 3px;-->
-    <!--outline: none;-->
-  <!--}-->
-  <!--.nub{-->
-    <!--margin: 0 auto;-->
-    <!--width: 80%;-->
-    <!--line-height: 35px;-->
-    <!--text-align: center;-->
-    <!--background-color: #38adff;-->
-    <!--font-size: 18px;-->
-    <!--color: #ffffff;-->
-    <!--border-radius: 5px;-->
-  <!--}-->
-  <!--.yan{-->
-    <!--margin-bottom: 10px;-->
-    <!--margin-left: 20px;-->
-    <!--text-decoration: none;-->
-    <!--color: #38adff;-->
-  <!--}-->
-  <!--.deng{-->
-    <!--width:100%;-->
-    <!--font-size: 14px;-->
-    <!--margin-top: 20px;-->
-    <!--text-decoration:none;-->
-    <!--margin-left: 40px;-->
-  <!--}-->
-  <!--.deng a{-->
-    <!--text-decoration:none;-->
-    <!--color:#38adff ;-->
-  <!--}-->
-  <!--#wang_i{-->
-    <!--margin-left: 170px;-->
-    <!--color: red;-->
-  <!--}-->
-
-<!--</style>-->
-<template>
-  <div>
-    <!--      登录背景图-->
-    <div class="bgb">
-      <!--        登录框-->
-      <div class="frame">
-        <div class="top">
-          <div class="xian"><span>登录平台</span></div>
-        </div>
-        <!--          input 框-->
-        <div class="shur">
-          <ul class="verify">
-            <li>
-              <input type="text" placeholder="手机号码">
-            </li>
-            <li>
-              <input v-if="flag" class="tops" type="text" placeholder="密码">
-              <input v-else class="tops" type="text" placeholder="验证码">
-
-              <button v-if="!flag" class="haoma">获取验证号码</button>
-            </li>
-          </ul>
-<div class="yan">
-<a href="" class="yan" @click.prevent="flag=!flag"> 验证码登录</a>
-</div>
-          <!--      点击事件注册annu-->
-          <div class="nub">
-            登录
-          </div>
-          <!--            已用账号-->
-          <div class="deng">
-            <router-link to="register">注册</router-link>
-            <router-link to="forget" id="wang_i">忘记密码？</router-link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
-  export default {
-    name: "T_Yy_lgion",
-    data() {
-      return {
-        msg: "",
-        flag:true
-      }
-    },
-    component: {}
+    background: #E51C23;
   }
-</script>
-
-<style scoped>
-  .bgb{
-    width: 100%;
-    height:652px;
-    background-image: url("http://yefengedu.com/static/img/bg_login.d936fa5.png");
-    background-repeat: no-repeat;
-    position: relative;
-  }
-  .frame{
-    width: 350px;
-    height: 365px;
-    background-color: #fff;
-    margin-left: 67.6667%;
-    position: relative;
-    top: 20%;
-  }
-  .top{
-    width: 100%;
-    height: 60px;
-    text-align: center;
-  }
-  .shur{
-    margin-top: 45px;
-    width: 100%;
-    height: 235px;
-  }
-
-  .xian{
-    width: 200px;
-    height: 100%;
-    margin: 0 auto;
-    line-height: 60px;
-    border-bottom: 3px solid #38adff;
-  }
-  .xian span{
-    color: #303133;
-    font-size: 20px;
-  }
-  .verify{
-    width: 100%;
-    height: 101px;
-    /*background-color: red;*/
-    list-style: none;
-  }
-  .verify li{
-    width: 100%;
-    height: 38px;
-    margin-top: 20px;
-    text-align: center;
-    /*background-color: #42b983;*/
-  }
-  .verify li input{
-    width: 80%;
-    padding: 10px;
-    line-height: 1.2;
-    font-size: 14px;
-    color: #666666;
-
-    border-radius: 3px;
-    border: 1px solid #f1f1f1;
-  }
-
-  .haoma{
+  .haomeds{
     position: absolute;
     width: 30%;
     line-height: 37px;
     border: none;
-    background: #E51C23;
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-
+    background: #E51C23;
+    right: 10%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     outline: none;
   }
-  .nub{
-    margin: 0 auto;
-    width: 80%;
-    line-height: 35px;
-    text-align: center;
-    background-color: #38adff;
-    font-size: 18px;
-    color: #ffffff;
-    border-radius: 5px;
+  .haomed{
+    background-color: gainsboro;
   }
-  .yan{
-    margin-bottom: 10px;
-    margin-left: 20px;
-    text-decoration: none;
-    color: #38adff;
+  .haos{
+    width: 450px;
+    height: 40px;
+    background-color: greenyellow;
+    opacity: 0.5;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left:-175px;
+    z-index: 10;
   }
-  .deng{
-    width:100%;
+  .diss{
+    line-height: 40px;
     font-size: 14px;
-    margin-top: 20px;
-    text-decoration:none;
+    color: black;
     margin-left: 40px;
+
   }
-  .deng a{
-    text-decoration:none;
-    color:#38adff ;
-  }
-  #wang_i{
-    margin-left: 170px;
-    color: red;
+  .zis{
+    margin-left: 10px;
   }
 
 </style>
+
+
+
+

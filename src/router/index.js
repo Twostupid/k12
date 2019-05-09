@@ -73,6 +73,20 @@ export default new Router({
       ]
     },
 
+  //  个人中心路由
+    {
+      path:'/personal',
+      name:'personal',
+      component:(resolve) => require(['../components/B_Yy_personal.vue'],resolve),
+      children:[
+        //完善资料
+        {
+          path: 'datum',
+          name: 'datum',
+          component: (resolve) =>require(['../components/C_Yy_datum.vue'],resolve)}
+
+      ]
+    },
 
   ]
 })
