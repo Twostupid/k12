@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!--lx-->
     <header id="header" class="header" >
       <div class="container">
         <nav class="nav-bar">
@@ -69,8 +68,8 @@
         </div>
       </div>
     </footer>
-
   </div>
+  <div>
     <footer class="footer container">
       <div class="container-1200">
         <div class="row">
@@ -97,6 +96,7 @@
     <div class="copyright">
       <div class="copyright-container"><p>上海晔枫教育科技有限公司 © 2009-2018 yefengedu.com 版权所有 ICP证：【沪ICP备18019568号-1】</p></div>
     </div>
+  </div>
 </template>
 <script>
   export default {
