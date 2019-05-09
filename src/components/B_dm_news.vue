@@ -65,8 +65,6 @@
             this.$axios.get('/api/course/categories').then(res=> {
               let dataone = res.data;
               console.log(dataone);
-
-
             })
           }
         },
