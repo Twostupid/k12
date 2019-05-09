@@ -63,7 +63,6 @@
           getdata(){
             this.$axios.get('/api/course/categories?page=1&size=30').then(res => {
               let dataone = res.data;
-
               this.list = res.data.data
               console.log(res.data.data);
               this.pagenumb = Number(this.list.length)/this.pagesize

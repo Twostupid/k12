@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <!--lx-->
-    <header id="header" class="header" >
+    <header id="header" class="header">
       <div class="container">
         <nav class="nav-bar">
           <router-link to="/" class="logo">
-          <img src="http://yefengedu.com/static/img/logo.cf4591a.png">
+            <img src="http://yefengedu.com/static/img/logo.cf4591a.png">
           </router-link>
           <ul class="menus el-menu">
             <li class="el-menu-item">
@@ -29,17 +29,17 @@
           </ul>
           <ul class="user-area el-menu">
             <router-link to="/">
-            <li class="el-menu-item is-active text-active register  btn-hover">
-              <router-link to="/" class="ulinkr">注册
-              </router-link>
-            </li>
+              <li class="el-menu-item is-active text-active register  btn-hover">
+                <router-link to="/" class="ulinkr">注册
+                </router-link>
+              </li>
             </router-link>
             <router-link to="/login">
-            <li class="el-menu-item">
+              <li class="el-menu-item">
               <span class="login-button btn-hover">
                 <router-link class="ulink" to="/login">登录</router-link>
               </span>
-            </li>
+              </li>
             </router-link>
           </ul>
         </nav>
@@ -49,22 +49,42 @@
 
     <router-link to="/building"></router-link>
     <router-view></router-view>
+    <footer data-v-7dd795f5="" class="footer container">
+      <div data-v-7dd795f5="" class="container-1200">
+        <div data-v-7dd795f5="" class="row">
+          <div data-v-7dd795f5="" class="col"><img data-v-7dd795f5="" src="http://yefengedu.com/static/img/logo1.4a14481.png"></div>
+          <div data-v-7dd795f5="" class="col"><h2 data-v-7dd795f5="">帮助中心</h2>
+            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/understand">了解晔枫</a></p>
+            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/join">加入晔枫</a></p>
+            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/problem">常见问题</a></p></div>
+          <div data-v-7dd795f5="" class="col"><h2 data-v-7dd795f5="">服务协议</h2>
+            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/protocol">用户协议</a></p>
+            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/statement">免责声明</a></p>
+            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/privacy">隐私政策</a></p></div>
+          <div data-v-7dd795f5="" class="col"><h2 data-v-7dd795f5="">微信公众号</h2>
+            <p data-v-7dd795f5=""><a data-v-7dd795f5=""><img data-v-7dd795f5=""
+                                                             src="http://yefengedu.com/static/img/gongzhonghao.8168dbd.png"
+                                                             alt="gongzhonghao" width="110" height="110"></a></p></div>
+          <div data-v-7dd795f5="" class="col"><h2 data-v-7dd795f5="">客户服务</h2>
+            <h1 data-v-7dd795f5="">400-1168-805</h1>
+            <p data-v-7dd795f5="">(9:30-17:30)</p></div>
+        </div>
+      </div>
+    </footer>
 
   </div>
 </template>
 <script>
 
   export default {
-  name: 'App',
-    components:{
+    name: 'App',
+    components: {}
 
-    }
-
-}
+  }
 </script>
 
 <style>
-  *{
+  * {
     margin: 0px;
     padding: 0px;
   }
