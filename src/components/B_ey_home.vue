@@ -163,49 +163,9 @@
 </template>
 
 <script>
-  import { swiper,swiperSlide } from 'vue-awesome-swiper'
+
   export default{
-    components:{
-      swiper,
-      swiperSlide
-    },
-    data(){
-      return {
-        swiperOption:{
-          notNextTick:true,
-          pagination:{
-            el:'.swiper-pagination'
-          },
-          loop:true,
-          disableOnInteraction:true,
-          autoplay:2000,
-          slidesPerView:'auto',
-          centeredSlides:true,
-          paginationClickable:true,
-          spaceBetween:30,
-          onSlideChangeEnd:swiper => {
-            //这个位置放置swiper的回调方法
-            this.page = swiper.realIndex+1;
-            this.index = swiper.realIndex;
-          }
-        }
-      }
-    },
-    computed:{
-      //定义这个swiper对象
-      swiper(){
-        return this.$refs.mySwiper.swiper;
-      }
-    },
-    mounted() {
-      //这边就可以使用swiper这个对象或使用swiper官网中的方法
-      var that=this;
-      this.swiper.slideTo(0,0,false);
-      //自动播放
-      setInterval(function(){
-        that.swiper.slideNext()
-      },2000)
-    },
+    name: "B_ey_home",
   }
 </script>
 
