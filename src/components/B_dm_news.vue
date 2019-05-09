@@ -1,7 +1,6 @@
 <template>
     <div class="news_all">
       <div class="news_left">
-
         <div class="news_list">
           <router-link to="/">
             <div class="news_list_everyone" v-for="item in list">
@@ -14,33 +13,23 @@
           </router-link>
 
         </div>
-
         <div class="pager">
           <span>共  条</span>
-
           <div>
             <select >
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="50">30</option>
-
             </select>
           </div>
-
-
           <a href=""> < </a>
           <span v-for="item in pagenumb">{{item}}</span>
           <a href=""> > </a>
-
-
-
           <div class="goto">
             前往<input type="text"/>页
-
           </div>
           </div>
         </div>
-
       <div class="news_right">
         <img src="http://yefengedu.com/static/img/banner.3eee7fe.jpg" alt="">
         <div class="news_right_title">
@@ -61,8 +50,6 @@
 </template>
 
 <script>
-
-
     export default {
         name: "B_dm_news",
         data(){

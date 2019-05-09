@@ -6,8 +6,6 @@
       <li data-target="#myCarousel" data-slide-to="1" class="noa" style="width: 30px;height: 2px"></li>
       <li data-target="#myCarousel" data-slide-to="2" class="noa" style="width: 30px;height: 2px"></li>
       <li data-target="#myCarousel" data-slide-to="3" class="noa" style="width: 30px;height: 2px"></li>
-
-
     </ol>
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner" >
