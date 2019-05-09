@@ -40,7 +40,7 @@ export default new Router({
       name: 'homep',
       component: (resolve) => require(['../components/B_ey_home.vue'],resolve)
     },
-    //新闻咨询
+    //新闻咨询123
     {
       path:'/news',
       name:'news',

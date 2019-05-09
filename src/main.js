@@ -7,6 +7,7 @@ import '../node_modules/bootstrap3/dist/css/bootstrap.css'
 import '../static/css/main.css'
 import moment from 'moment/moment'
 Vue.config.productionTip = false;
+import $ from 'jquery'
 import '../node_modules/bootstrap3/dist/js/bootstrap.min.js'
 import axios from 'axios'
 Vue.prototype.$axios= axios;
