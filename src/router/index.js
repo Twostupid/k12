@@ -45,6 +45,34 @@ export default new Router({
       name: 'forget',
       component: (resolve) => require(['../components/B_Yy_forget.vue'],resolve)
     },
+    //帮助中心
+    {
+      path: '/help',
+      name: 'help',
+      component: (resolve) => require(['../components/B_dm_helpcentre.vue'],resolve),
+      children:[
+        {
+          path: 'understand',
+          name: 'understand',
+          component: (resolve) => require(['../components/C_dm_understand.vue'],resolve)
+        },
+        {
+          path: '/help',
+          redirect:'understand'
+        },
+        {
+          path: 'joinus',
+          name: 'joinus',
+          component: (resolve) => require(['../components/C_dm_joinus.vue'],resolve)
+        },
+        {
+          path: 'problem',
+          name: 'problem',
+          component: (resolve) => require(['../components/C_dm_problem.vue'],resolve)
+        },
+      ]
+    },
+
 
   ]
 })

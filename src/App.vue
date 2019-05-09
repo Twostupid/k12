@@ -49,14 +49,14 @@
 
     <router-link to="/building"></router-link>
     <router-view></router-view>
-    <footer data-v-7dd795f5="" class="footer container">
+    <footer data-v-7dd795f5="" class="footer container" style="overflow: hidden">
       <div data-v-7dd795f5="" class="container-1200">
         <div data-v-7dd795f5="" class="row">
           <div data-v-7dd795f5="" class="col"><img data-v-7dd795f5="" src="http://yefengedu.com/static/img/logo1.4a14481.png"></div>
           <div data-v-7dd795f5="" class="col"><h2 data-v-7dd795f5="">帮助中心</h2>
-            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/understand">了解晔枫</a></p>
-            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/join">加入晔枫</a></p>
-            <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/problem">常见问题</a></p></div>
+            <p data-v-7dd795f5=""><router-link to="/help">了解晔枫</router-link></p>
+            <p data-v-7dd795f5=""><router-link to="/help/joinus">加入晔枫</router-link></p>
+            <p data-v-7dd795f5=""><router-link to="/help/problem">常见问题</router-link></p></div>
           <div data-v-7dd795f5="" class="col"><h2 data-v-7dd795f5="">服务协议</h2>
             <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/protocol">用户协议</a></p>
             <p data-v-7dd795f5=""><a data-v-7dd795f5="" href="/app.html#/statement">免责声明</a></p>
