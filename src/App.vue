@@ -28,9 +28,9 @@
             </li>
           </ul>
           <ul class="user-area el-menu">
-            <router-link to="/">
+            <router-link to="/register">
             <li class="el-menu-item is-active text-active register  btn-hover">
-              <router-link to="/" class="ulinkr">注册
+              <router-link to="/register" class="ulinkr">注册
               </router-link>
             </li>
             </router-link>

@@ -56,17 +56,20 @@
             return{
               list:"",
               pagenumb:'',
-              pagesize:10
+              pagesize:10,
+              count:""
             }
         },
         methods:{
           getdata(){
-            this.$axios.get('/api/course/categories?page=1&size=30').then(res => {
+            this.$axios.get('/api/course/categories?page=1&size=40').then(res => {
               let dataone = res.data;
+              console.log(dataone)
 
               this.list = res.data.data
               console.log(res.data.data);
               this.pagenumb = Number(this.list.length)/this.pagesize
+              this.count = this.list.length
 
             })
           }

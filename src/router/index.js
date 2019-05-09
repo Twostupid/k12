@@ -6,16 +6,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect:'/homep'
-    },
-    //从定向回登录
-    {
-      path: '/register',
-      redirect:'/'
+      redirect:'homep'
     },
     //注册
     {
-      path: '/',
+      path: '/register',
       name: 'home',
       component: (resolve) => require(['../components/B_Yy_lgion.vue'],resolve)
     },
