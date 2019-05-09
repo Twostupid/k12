@@ -1,18 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
-
 export default new Router({
   mode:'history',
   routes: [
     {
-      path: '*',
-      redirect:'/'
+      path: '/',
+      redirect:'/homep'
     },
     //从定向回登录
     {
-      path: ' /register',
+      path: '/register',
       redirect:'/'
     },
     //注册
