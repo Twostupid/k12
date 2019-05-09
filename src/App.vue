@@ -76,17 +76,22 @@
             </p>
           </div>
           <div class="col"><h2>微信公众号</h2>
-            <p><router-link to="/"><img
-              src="http://yefengedu.com/static/img/gongzhonghao.8168dbd.png"
-              alt="gongzhonghao" width="110" height="110"></router-link></p></div>
+            <p>
+              <router-link to="/"><img
+                src="http://yefengedu.com/static/img/gongzhonghao.8168dbd.png"
+                alt="gongzhonghao" width="110" height="110"></router-link>
+            </p>
+          </div>
           <div class="col"><h2>客户服务</h2>
             <h1>400-1168-805</h1>
             <p>(9:30-17:30)</p></div>
         </div>
       </div>
     </footer>
-
-  </div>
+    <div class="copyright">
+      <div class="copyright-container"><p>上海晔枫教育科技有限公司 © 2009-2018 yefengedu.com 版权所有 ICP证：【沪ICP备18019568号-1】</p></div>
+    </div>
+   </div>
 </template>
 <script>
 

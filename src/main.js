@@ -10,6 +10,9 @@ Vue.config.productionTip = false;
 import $ from 'jquery'
 import '../node_modules/bootstrap3/dist/js/bootstrap.min.js'
 import axios from 'axios'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 Vue.prototype.$axios= axios;
 
 Vue.filter('moment', function (value, formatString) {
