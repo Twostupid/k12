@@ -46,10 +46,8 @@
       </div>
     </header>
     <router-link to="/home"></router-link>
-
     <router-link to="/building"></router-link>
     <router-view></router-view>
-
   </div>
 </template>
 <script>
