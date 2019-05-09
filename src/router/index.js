@@ -8,7 +8,7 @@ export default new Router({
       path: '/',
       redirect:'/homep'
     },
-    //从定向回登录1
+    //从定向回登录
     {
       path: '/register',
       redirect:'/'
