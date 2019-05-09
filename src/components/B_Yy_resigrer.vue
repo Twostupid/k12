@@ -71,6 +71,7 @@
           this.msgs='账号验证码不能为空'
           this.time()
         }else{
+          console.log(123)
 
         }
       },
