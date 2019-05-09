@@ -5,7 +5,10 @@ import App from './App'
 import router from './router'
 import '../node_modules/bootstrap3/dist/css/bootstrap.css'
 import '../static/css/main.css'
+
 import moment from 'moment/moment'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false;
 import $ from 'jquery'
 import '../node_modules/bootstrap3/dist/js/bootstrap.min.js'
@@ -15,7 +18,7 @@ import 'swiper/dist/css/swiper.css'
 import '../node_modules/swiper/dist/js/swiper.min.js'
 Vue.use(VueAwesomeSwiper)
 Vue.prototype.$axios= axios;
-
+Vue.use(ElementUI)
 Vue.filter('moment', function (value, formatString) {
   formatString = formatString || 'YYYY-MM-DD HH:mm:ss';
   return moment(value).format(formatString);

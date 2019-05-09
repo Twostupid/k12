@@ -9,13 +9,10 @@ export default new Router({
       redirect:'/homep'
     },
     //从定向回登录99
-    {
-      path: '/register',
-      redirect:'/'
-    },
+
     //注册
     {
-      path: '/',
+      path: '/register',
       name: 'home',
       component: (resolve) => require(['../components/B_Yy_lgion.vue'],resolve)
     },
@@ -49,6 +46,20 @@ export default new Router({
       path: '/forget',
       name: 'forget',
       component: (resolve) => require(['../components/B_Yy_forget.vue'],resolve)
+    },
+  //  个人中心路由
+    {
+      path:'/personal',
+      name:'personal',
+      component:(resolve) => require(['../components/B_Yy_personal.vue'],resolve),
+      children:[
+        //完善资料
+        {
+          path: 'datum',
+          name: 'datum',
+          component: (resolve) =>require(['../components/C_Yy_datum.vue'],resolve)}
+
+      ]
     },
 
   ]
