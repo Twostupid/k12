@@ -14,7 +14,7 @@
 
         </div>
         <div class="pager">
-          <span>共{{count}}条</span>
+          <span>共  条</span>
           <div>
             <select >
               <option value="10">10</option>
@@ -62,14 +62,10 @@
         },
         methods:{
           getdata(){
-            this.$axios.get('/api/course/categories?page=1&size=40').then(res => {
+            this.$axios.get('/api/course/categories').then(res=> {
               let dataone = res.data;
-              console.log(dataone)
+              console.log(dataone);
 
-              this.list = res.data.data
-              console.log(res.data.data);
-              this.pagenumb = Number(this.list.length)/this.pagesize
-              this.count = this.list.length
 
             })
           }
