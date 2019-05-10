@@ -10,9 +10,8 @@ ul li {
 body {
   font-size: 12px;
   font-family: Roboto;
-  background: #ffffff;
   width: 100%;
-  background-color: #ececec;
+  background-color: #f4f4f4;
 }
 
 .el-menu-item .rlStyle {
@@ -42,6 +41,9 @@ body {
   overflow: hidden;
   text-align: center;
 
+}
+.el-menu{
+    border-right: none !important;
 }
 
 .nav-bar .logo, .el-menu {
@@ -86,6 +88,11 @@ body {
 .menus .el-menu-item:hover {
   border-bottom: 2px solid #FB5B62 !important;
 }
+.menus{
+  border-right:none !important;
+;
+}
+
 
 .nav-bar .user-area {
   /*width: 200px;*/
@@ -164,8 +171,9 @@ body {
   box-sizing: border-box;
 }
 
-.btn-hover {
 
+.loginTwo{
+  top: -11px;
 }
 
 .user-area .el-menu-item {
@@ -176,6 +184,7 @@ body {
 /*登录按钮*/
 .user-area .login-button {
   border: 1px solid #fb5b63 !important;
+  height: 35px;
   height: 35px;
   line-height: 35px;
 
@@ -192,19 +201,23 @@ body {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
+
 }
 
 .footer {
   width: 100%;
   height: 250px;
   background: #f4f4f4;
+  overflow: hidden;
+
+
 }
 
 .container-1200 {
   display: block;
   width: 1200px;
   margin: 0 auto;
-  position: relative;
+  /*position: relative;*/
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -232,7 +245,7 @@ body {
   line-height: 14px;
   margin-bottom: 25px;
   display: block;
-  position: relative;
+  /*position: relative;*/
   color: #999999;
 
 }
@@ -498,11 +511,7 @@ body {
   .swiperBox{
     width: 100%;
   height: 500px;
-  }　
-
-
-  　　　
-  　　
+  }
 　　.page {
   　　　　width: 100%;
   　　　　height: 300px;

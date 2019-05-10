@@ -6,7 +6,7 @@
             <div class="news_list_everyone" v-for="item in list">
               <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
               <div class="news_list_everyone_main">
-                <h4 class="everyone_main_title">{{item.name}}</h4>
+                <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
                 <span>{{item.time|moment}}</span>
               </div>
             </div>
@@ -14,19 +14,20 @@
 
         </div>
         <div class="pager">
-          <span>共  条</span>
+          <span>共 {{count}} 条</span>&nbsp;
           <div>
             <select >
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="50">30</option>
+              <option value="10" @click="jumppage(1,10)">10</option>
+              <option value="20" @click="jumppage(1,20)">20</option>
+              <option value="50" @click="jumppage(1,30)">30</option>
             </select>
+            &nbsp;
           </div>
-          <a href=""> < </a>
-          <span v-for="item in pagenumb">{{item}}</span>
-          <a href=""> > </a>
+          <a @click="jumppage(1,10)" class="glyphicon glyphicon-menu-left" style="margin-top: 17px"></a>
+          <span v-for="item in pagenumb" @click="jumppage(item,10)">{{item}}</span>
+          <a @click="jumppage(2,10)" class="glyphicon glyphicon-menu-right" style="margin-top: 17px"></a>
           <div class="goto">
-            前往<input type="text"/>页
+            前往&nbsp;&nbsp;<input type="text" @input="jumppage(pagenow,10)"/>&nbsp;&nbsp;页
           </div>
           </div>
         </div>
@@ -56,22 +57,35 @@
             return{
               list:"",
               pagenumb:'',
-              pagesize:10
+              pagesize:10,
+              count:"",
+              pagenow:'1'//当前第几页
             }
         },
         methods:{
           getdata(){
-            this.$axios.get('/api/course/categories?page=1&size=30').then(res => {
+            this.$axios.get('/api/course/categories').then(res=> {
               let dataone = res.data;
-              this.list = res.data.data
-              console.log(res.data.data);
-              this.pagenumb = Number(this.list.length)/this.pagesize
-
+              // console.log(dataone);
+              this.pagenumb = Number(dataone.data.length)/this.pagesize;
+              this.count = dataone.data.length
             })
-          }
+          },
+          jumppage(a,b){
+            if (a==1){
+              this.pagenow--;
+            }else if (a==2){
+              this.pagenow++;
+            }
+            this.$axios.get('/api/course/categories?page='+this.pagenow+'&size='+this.pagesize+'').then(res=>{
+              console.log(res.data.data);
+              this.list = res.data.data
+            })
+          },
         },
       mounted(){
         this.getdata();
+        this.jumppage();
       }
     }
 </script>
@@ -81,6 +95,7 @@
     width: 1200px;
     margin: auto;
     margin-top: 20px;
+    overflow: hidden;
   }
   .news_list_everyone{
     width: 900px;
@@ -115,6 +130,7 @@
     margin-top: 20px;
   }
   .everyone_main_title:hover{
+
     color: #ff2a24;
     transition: all .5s;
   }
@@ -187,7 +203,7 @@
   }
 
   .pager{
-    width: 600px;
+    width: 350px;
     margin: 0 auto;
     margin-top: 10px;
     height: 48px;
@@ -204,7 +220,7 @@
     box-sizing:border-box;
   }
   .pager input{
-    width: 30px;
+    width: 40px;
     height: 30px;
   }
   .pager .goto{
