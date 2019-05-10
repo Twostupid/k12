@@ -6,8 +6,8 @@
           <router-link to="/help/joinus"><li class="help_everyone">加入晔枫</li></router-link>
           <router-link to="/help/problem"><li class="help_everyone">常见问题</li></router-link>
           <router-link to="/help/agreement"><li class="help_everyone">用户协议</li></router-link>
-          <router-link to="/"><li class="help_everyone">免责声明</li></router-link>
-          <router-link to="/"><li class="help_everyone">隐私策略</li></router-link>
+          <router-link to="/help/disclaimer"><li class="help_everyone">免责声明</li></router-link>
+          <router-link to="/help/privacy"><li class="help_everyone">隐私策略</li></router-link>
         </ul>
       </div>
       <div class="help_father_right">

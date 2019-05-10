@@ -71,10 +71,10 @@
               <router-link to="/help/agreement">用户协议</router-link>
             </p>
             <p>
-              <router-link to="/">免责声明</router-link>
+              <router-link to="/help/disclaimer">免责声明</router-link>
             </p>
             <p>
-              <router-link to="/">隐私政策</router-link>
+              <router-link to="/help/privacy">隐私政策</router-link>
             </p>
           </div>
           <div class="col"><h2>微信公众号</h2>

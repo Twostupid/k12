@@ -76,6 +76,16 @@ export default new Router({
           path:'agreement',
           name:'agreement',
           component: (resolve) => require(['../components/C_dm_agreement.vue'],resolve)
+        },
+        {
+          path:'disclaimer',
+          name:'disclaimer',
+          component: (resolve) => require(['../components/C_dm_disclaimer.vue'],resolve)
+        },
+        {
+          path:'privacy',
+          name:'privacy',
+          component: (resolve) => require(['../components/C_dm_privacy.vue'],resolve)
         }
       ]
     },
@@ -97,7 +107,12 @@ export default new Router({
           path: 'profile',
           name: 'profile',
           component: (resolve) => require(['../components/C_Yy_profile.vue'], resolve)
-        }
+        },
+        {
+          path: 'address',
+          name: 'address',
+          component: (resolve) => require(['../components/C_dm_address.vue'], resolve)
+        },
       ]
     },
 
