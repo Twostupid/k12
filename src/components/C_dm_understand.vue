@@ -35,7 +35,6 @@
       }
     }
 </script>
-
 <style scoped>
   .understand{
     width: 898px;
