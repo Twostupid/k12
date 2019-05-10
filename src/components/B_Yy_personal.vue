@@ -19,7 +19,7 @@
       <router-link to="/personal/profile">修改头像</router-link>
     </li>
     <li>
-      <router-link to="">收货地址</router-link>
+      <router-link to="/personal/address">收货地址</router-link>
     </li>
     <li>
       <router-link to="">我的订单</router-link>
