@@ -4,7 +4,7 @@
     <header id="header" class="header">
       <div class="container">
         <nav class="nav-bar">
-          <router-link to="/" class="logo">
+          <router-link to="/homep" class="logo">
             <img src="http://yefengedu.com/static/img/logo.cf4591a.png">
           </router-link>
           <ul class="menus el-menu">
