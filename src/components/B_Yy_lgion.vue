@@ -112,7 +112,6 @@
             //     console.log(err)
             //   })
             // }
-
             this.banban=true;
             if(this.biubiu){
             //  进行判断验证码是否正确
