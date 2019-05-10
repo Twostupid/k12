@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import C_dm_agreement from "@/components/C_dm_agreement";
 Vue.use(Router)
 export default new Router({
   mode:'history',
@@ -70,6 +71,11 @@ export default new Router({
           name: 'problem',
           component: (resolve) => require(['../components/C_dm_problem.vue'],resolve)
         },
+        {
+          path:'agreement',
+          name:'agreement',
+          component: (resolve) => require(['../components/C_dm_agreement.vue'],resolve)
+        }
       ]
     },
 
