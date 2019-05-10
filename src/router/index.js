@@ -107,7 +107,12 @@ export default new Router({
           path: 'profile',
           name: 'profile',
           component: (resolve) => require(['../components/C_Yy_profile.vue'], resolve)
-        }
+        },
+        {
+          path: 'address',
+          name: 'address',
+          component: (resolve) => require(['../components/C_dm_address.vue'], resolve)
+        },
       ]
     },
 
