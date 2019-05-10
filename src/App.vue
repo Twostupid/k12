@@ -58,10 +58,10 @@
               <router-link to="/help">了解晔枫</router-link>
             </p>
             <p>
-              <router-link to="/">加入晔枫</router-link>
+              <router-link to="/help/joinus">加入晔枫</router-link>
             </p>
             <p>
-              <router-link to="/">常见问题</router-link>
+              <router-link to="/help/problem">常见问题</router-link>
             </p>
           </div>
           <div class="col"><h2>服务协议</h2>

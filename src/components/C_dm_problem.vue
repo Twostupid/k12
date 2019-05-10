@@ -45,7 +45,6 @@
     width: 900px;
     background-color: white;
     padding-bottom: 20px;
-    overflow: hidden;
   }
   .main>h1{
     text-align: center;

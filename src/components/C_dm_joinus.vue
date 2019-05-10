@@ -44,7 +44,6 @@
 <style scoped>
   .joinus_father{
     width: 900px;
-    height: 974px;
     background-color: white;
     text-align: center;
     padding: 44px 74px 60px 86px;
