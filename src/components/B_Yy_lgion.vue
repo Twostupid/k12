@@ -124,7 +124,7 @@
               // }
               if(this.pass.length!=0){
                 //  返回true跳转完善个人中心页面
-                window.location.href="/personal"
+                window.location.href="/personal/datum"
               }else{
                 this.ming="请获取验证码";
                 this.boor=true;
