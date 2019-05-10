@@ -84,6 +84,15 @@ body {
   line-height: 30px;
   height: 30px;
 }
+/*用户中心小框*/
+.el-menu-item_1{
+  font-size: 14px;
+  color: #332c2f;
+  margin: 15px 25px;
+  padding: 0;
+  line-height: 30px;
+  height: 20px;
+}
 
 .menus .el-menu-item:hover {
   border-bottom: 2px solid #FB5B62 !important;
