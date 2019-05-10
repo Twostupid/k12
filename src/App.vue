@@ -28,19 +28,21 @@
             </li>
           </ul>
           <ul class="user-area el-menu">
-            <router-link to="/register">
-              <li class="el-menu-item is-active text-active register  btn-hover">
-                <router-link to="/register" class="ulinkr">注册
-                </router-link>
-              </li>
-            </router-link>
-            <router-link to="/login">
-              <li class="el-menu-item loginTwo">
-              <span class="login-button btn-hover">
-                <router-link class="ulink" to="/login">登录</router-link>
-              </span>
-              </li>
-            </router-link>
+            <!--<router-link to="/register">-->
+              <!--<li class="el-menu-item is-active text-active register  btn-hover">-->
+                <!--<router-link to="/register" class="ulinkr">注册-->
+                <!--</router-link>-->
+              <!--</li>-->
+            <!--</router-link>-->
+            <!--<router-link to="/login">-->
+              <!--<li class="el-menu-item loginTwo">-->
+              <!--<span class="login-button btn-hover">-->
+                <!--<router-link class="ulink" to="/login">登录</router-link>-->
+              <!--</span>-->
+              <!--</li>-->
+            <!--</router-link>-->
+            <li class="after_login"><img src="http://yefengedu.com/static/images/v2.0/img/logo.png" alt="" class="small_logo"></li>
+            <li class="after_login">15734121521<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></li>
           </ul>
         </nav>
       </div>

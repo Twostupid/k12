@@ -71,10 +71,10 @@
           课程不枯燥，迅速上手，提高专注力。零基础起步直通代码编程。涵盖编程知识方方面面。玩中练、练中学，让孩子爱上编程。线上课程，别人通勤时间就是我的学习时间。教学体系和学习效果远超Scratch。直播+夏令营，与“大咖”面对面。
         </p>
         <div class="row">
-          <div class=" col-lg-6 col-sm-12 col-xs-12 col-md-6 text-center" style="margin-bottom: 15px;"><img
+          <div class=" col-lg-6 col-sm-12 col-xs-12 col-md-6 text-center" style="margin-bottom: 15px;"  @click="video"><img
             src="http://yefengedu.com/static/images/v2.0/video-cover1.png" alt="" width="100%" style="cursor: pointer;">
           </div>
-          <div class=" col-lg-6 col-sm-12 col-xs-12 col-md-6 text-center"><img
+          <div class=" col-lg-6 col-sm-12 col-xs-12 col-md-6 text-center" @click="video"><img
             src="http://yefengedu.com/static/images/v2.0/video-cover2.png" alt="" width="100%" style="cursor: pointer;">
           </div>
         </div>
@@ -161,7 +161,8 @@
         <swiper :options="swiperOption" ref="mySwiper" style="width: 75%;
     height: 400px;">
           <!-- 这部分放置需要渲染的内容 -->
-          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/1.png)
  ">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
@@ -170,7 +171,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width: 60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width: 60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/2.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">马化腾</p>
               <p style="padding-left: 320px; line-height: 30px;">腾讯创始人</p>
@@ -178,7 +180,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color: white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color: white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/3.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">李彦宏</p>
               <p style="padding-left: 320px; line-height: 30px;">百度创始人</p>
@@ -186,7 +189,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/4.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
               <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
@@ -194,7 +198,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color: white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color: white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/5.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
               <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
@@ -202,7 +207,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/6.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
               <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
@@ -210,7 +216,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/7.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
               <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
@@ -218,7 +225,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/8.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
               <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
@@ -226,7 +234,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/9.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
               <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
@@ -234,7 +243,8 @@
 
             </div>
           </swiper-slide>
-          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+          <swiper-slide
+            style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
             <div class="swiper-slide"
                  style="background-image:url(http://yefengedu.com/static/images/v2.0/10.png)">
               <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
@@ -245,12 +255,61 @@
           </swiper-slide>
 
 
-          <div class="swiper-pagination " slot="pagination" ></div>
+          <div class="swiper-pagination " slot="pagination"></div>
         </swiper>
       </div>
 
 
     </section>
+    <section class="section-7">
+      <div class="container">
+        <div class="titleContent"><h1 class="text-center tcimp_1">课程价格</h1></div>
+        <p class="text-center-content">
+          让编程就像搭积木一样简单，只要识字便能开始学习编程。极灵兔编程还将编程的知识点设计为一个个的闯关游戏，让孩子可以在趣味闯关中，循序渐进地掌握编程技能。极灵兔编程是少儿学编程软件好选择！</p>
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
+            <div class="section-content">
+              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section1.png" width="380"
+                                       height="533" class="img-responsive taocanyi"></router-link>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
+            <div class="section-content">
+              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section2.png" width="380"
+                                       height="533" class="img-responsive taocaner"></router-link>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
+            <div class="section-content">
+              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section3.png" width="380"
+                                       height="533" class="img-responsive taocansan"></router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--视频弹窗-->
+    <div class="vedioStyle" style="position: fixed;top:0;z-index: 9999; background-color: rgba(0,0,0,.5); width: 1583px; height:1000px;" v-show="flag">
+      <div role="dialog" aria-modal="true" aria-label="视频" class="el-dialog video-wrap" style=" margin-top:5%;width:50%;">
+
+
+      <div class="el-dialog__header"><span class="el-dialog__title">视频</span>
+        <button type="button" aria-label="Close" class="el-dialog__headerbtn" @click="video"><i
+          class="el-dialog__close el-icon el-icon-close"></i></button>
+      </div>
+      <div class="el-dialog__body">
+        <video
+          src="http://video.yefengedu.com/9caf9bbeb1134893b7f8f6657e8ea090/59e802771a1c4a829a971754fa0447dd-64538795cae0fc059c2d62659a89baa6-od-S00000001-200000.mp4"
+          controls="controls" autoplay="autoplay" width="100%" controlslist="nodownload" id="stopVideo">
+          您的浏览器不支持 video 标签。
+        </video>
+      </div>
+      <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
+                                                                         class="el-button el-button--primary" @click="video"><!---->
+        <!----><span>确 定</span></button></span></div>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -267,18 +326,18 @@
     },
     data() {
       return {
+        flag:false,
         swiperOption: {
           notNextTick: true,
           pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
-            bulletElement : 'span',//设置分页器小圆点标签，默认为span标签
-            clickable:true,
+            bulletElement: 'span',//设置分页器小圆点标签，默认为span标签
+            clickable: true,
             paginationClickable: true,
-            notNextTick:true,
+            notNextTick: true,
             bulletClass: 'bullet-class',
             bulletActiveClass: 'bullet-active-class',
-
 
 
           },
@@ -336,11 +395,15 @@
           this.swiper.autoplay.start();
         }
     },
+    methods:{
+      video(){
+        this.flag=!this.flag;
+      }
+    }
   }
 </script>
 
 <style>
-
 
 
   　　
