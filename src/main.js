@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import '../node_modules/bootstrap3/dist/css/bootstrap.css'
 import '../static/css/main.css'
-
+import '../static/css/cropper.css'
 import moment from 'moment/moment'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
