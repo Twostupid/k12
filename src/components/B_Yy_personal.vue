@@ -5,6 +5,10 @@
 
 <div class="left">
     <h3 class="left_one">个人中心</h3>
+<!--  图片-->
+  <div class="imgs">
+    <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1557456813&di=df6e1f3e308cb68e663833def2d08aeb&src=http://img2.ph.126.net/bbzrvDdevgaTXj2HK6ajPA==/6631597730307008033.jpg" alt="">
+  </div>
 
   <ul class="left_personal">
      <h2>个人信息</h2>
@@ -12,7 +16,7 @@
       <router-link to="/personal/datum">完善资料</router-link>
     </li>
     <li>
-      <router-link to="">修改头像</router-link>
+      <router-link to="/personal/profile">修改头像</router-link>
     </li>
     <li>
       <router-link to="">收货地址</router-link>
@@ -64,7 +68,7 @@
   }
   .personal{
     width: 1200px;
-    /*height: 100%;*/
+    height:830px;
     position: relative;
     left: 50%;
     margin-left: -600px;
@@ -74,7 +78,7 @@
   }
   .left{
     width: 190px;
-    height: 735px;
+    height: 829px;
     float: left;
     background-color: white;
   }
@@ -124,6 +128,17 @@
    color:rgb(0,0,0,0);
     background-size: 100% 100%;
     background-image: url("http://yefengedu.com/static/images/v2.0/img/20190116164838.png");
+  }
+  .imgs{
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+  }
+  .imgs img{
+    width: 150px;
+    height: 150px;
+    background-size: 100% 100%;
   }
 
 </style>

@@ -248,13 +248,10 @@
     width: 420px;
     border: 1px solid gainsboro;
   }
-
   .el-form-item {
     margin-left: 150px;
     margin-bottom: 16px;
-
   }
-
   .names {
     /*line-height: 17px;*/
     /*margin-bottom: -20px;*/
