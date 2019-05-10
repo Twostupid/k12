@@ -76,6 +76,16 @@ export default new Router({
           path:'agreement',
           name:'agreement',
           component: (resolve) => require(['../components/C_dm_agreement.vue'],resolve)
+        },
+        {
+          path:'disclaimer',
+          name:'disclaimer',
+          component: (resolve) => require(['../components/C_dm_disclaimer.vue'],resolve)
+        },
+        {
+          path:'privacy',
+          name:'privacy',
+          component: (resolve) => require(['../components/C_dm_privacy.vue'],resolve)
         }
       ]
     },
