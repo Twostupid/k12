@@ -157,24 +157,95 @@
         </p>
       </div>
       <div class="swiperBox" style=" width: 100%;
-    height: 500px;background-color: #FB6971">
+    height: 500px;">
         <swiper :options="swiperOption" ref="mySwiper" style="width: 75%;
     height: 400px;">
           <!-- 这部分放置需要渲染的内容 -->
-          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/1.png)
- "></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/2.png)"></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color: white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/3.png)"></div></swiper-slide>
-          <swiper-slide  style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/4.png)"></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color: white"><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/5.png)"></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/6.png)"></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/7.png)"></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/8.png)"></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/9.png)"></div></swiper-slide>
-          <swiper-slide style="width: 80%;background-color:white" ><div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/10.png)"></div></swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/1.png)
+ ">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width: 60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/2.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">马化腾</p>
+              <p style="padding-left: 320px; line-height: 30px;">腾讯创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color: white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/3.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">李彦宏</p>
+              <p style="padding-left: 320px; line-height: 30px;">百度创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">程序员出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/4.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color: white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/5.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/6.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/7.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/8.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide" style="background-image:url(http://yefengedu.com/static/images/v2.0/9.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
+          <swiper-slide style="width:  60%;border-radius:3px;background-color:white; moz-box-shadow:1px 1px 1px 1px #999 ; -webkit-box-shadow:1px 1px 1px 1px #999 ; box-shadow:1px 1px 1px 1px #999 ;">
+            <div class="swiper-slide"
+                 style="background-image:url(http://yefengedu.com/static/images/v2.0/10.png)">
+              <p style="padding-left: 320px; padding-top: 80px; font-size: 24px; padding-bottom: 10px;">特拉维斯·卡兰尼克</p>
+              <p style="padding-left: 320px; line-height: 30px;">Uber创始人</p>
+              <p style="padding-left: 320px; line-height: 30px;">软件工程师出身</p>
+
+            </div>
+          </swiper-slide>
 
 
-          <div class="swiper-pagination" slot="pagination"></div>
+          <div class="swiper-pagination " slot="pagination" ></div>
         </swiper>
       </div>
 
@@ -185,22 +256,33 @@
 
 <script>
 
-  import { swiper,swiperSlide } from 'vue-awesome-swiper'
-  export default{
-    name:'B_ey_home',
+  import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
-    components:{
+  export default {
+    name: 'B_ey_home',
+
+    components: {
       swiper,
       swiperSlide
     },
-    data(){
+    data() {
       return {
-        swiperOption:{
-          notNextTick:true,
-          pagination:{
-            el:'.swiper-pagination'
+        swiperOption: {
+          notNextTick: true,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            bulletElement : 'span',//设置分页器小圆点标签，默认为span标签
+            clickable:true,
+            paginationClickable: true,
+            notNextTick:true,
+            bulletClass: 'bullet-class',
+            bulletActiveClass: 'bullet-active-class',
+
+
+
           },
-          effect:'coverflow',
+          effect: 'coverflow',
           slidesPerView: 3,
           centeredSlides: true,
           coverflowEffect: {
@@ -210,41 +292,56 @@
             modifier: 3,
             slideShadows: false,
           },
+          autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+          },
 
+          loop: true,
+          disableOnInteraction: true,
 
-          loop:true,
-          disableOnInteraction:true,
-          autoplay:2000,
-          slidesPerView:'auto',
-          centeredSlides:true,
-          paginationClickable:true,
-          spaceBetween:30,
-          onSlideChangeEnd:swiper => {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          paginationClickable: true,
+          spaceBetween: 30,
+          onSlideChangeEnd: swiper => {
             //这个位置放置swiper的回调方法
-            this.page = swiper.realIndex+1;
+            this.page = swiper.realIndex + 1;
             this.index = swiper.realIndex;
           }
         }
       }
     },
-    computed:{
+    computed: {
       //定义这个swiper对象
-      swiper(){
+      swiper() {
         return this.$refs.mySwiper.swiper;
       }
     },
- mounted(){
+
+    mounted() {
       //这边就可以使用swiper这个对象或使用swiper官网中的方法
-      var that=this;
-      this.swiper.slideTo(0,0,false);
-      //自动播放
-      setInterval(function(){
-        that.swiper.slideNext()
-      },2000)
+      // var that=this;
+      // this.swiper.slideTo(0,0,false);
+      // //自动播放
+      // setInterval(function(){
+      //   that.swiper.slideNext()
+      // },2000)
+      this.swiper.el.onmouseover = function () {
+        this.swiper.autoplay.stop();
+
+      },
+        this.swiper.el.onmouseout = function () {
+          this.swiper.autoplay.start();
+        }
     },
   }
 </script>
 
-<style scoped>
+<style>
+
+
+
   　　
 </style>
