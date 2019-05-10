@@ -1,26 +1,30 @@
 <template>
+<div>
+  <div class="num1" @click="tu">
+    <div class="num2">
+      <img :src="url" alt="">
+    </div>
+    <div class="zis">大小不超过50k</div>
+    <div class="zis">尺寸: 178*178</div>
+  </div>
   <div id="demo">
     <!-- 遮罩层 -->
     <div class="container" v-show="panel">
       <div>
-        <img id="image" :src="url" alt="Picture">
+        <img id="image" :src="url" alt="Picture" >
       </div>
-
-      <button type="button" id="button" @click="crop">确定</button>
-
+      <button type="button" id="button" @click="crop">确定裁剪</button>
     </div>
-
     <div style="padding:20px;">
-      <div class="show">
-        <div class="picture" :style="'backgroundImage:url('+headerImage+')'">
-        </div>
       </div>
       <div style="margin-top:20px;">
-        <input type="file" id="change" accept="image" @change="change">
+        <input ref="filElem" type="file" id="change" accept="image" @change="change">
         <label for="change"></label>
       </div>
 
     </div>
+
+  </div>
   </div>
 </template>
 <script>
@@ -54,15 +58,21 @@
       },
         component: {},
       methods: {
+          tu(){
+            console.log(1213)
+            this.$refs.filElem.dispatchEvent(new MouseEvent('click'))
+          },
         getObjectURL(file) {
           var url = null;
           if (window.createObjectURL != undefined) { // basic
             url = window.createObjectURL(file);
           } else if (window.URL != undefined) { // mozilla(firefox)
             url = window.URL.createObjectURL(file);
+            this.$emit('num',url)
           } else if (window.webkitURL != undefined) { // webkit or chrome
             url = window.webkitURL.createObjectURL(file);
           }
+
           return url;
         },
         change(e) {
@@ -80,16 +90,16 @@
 
         },
         crop() {
+
+          this.$router.push({path:'/personal/profile', query: {num:this.url}})
           this.panel = false;
           var croppedCanvas;
           var roundedCanvas;
-
           if (!this.croppable) {
             return;
           }
           // Crop
           croppedCanvas = this.cropper.getCroppedCanvas();
-          console.log(this.cropper)
           // Round
           roundedCanvas = this.getRoundedCanvas(croppedCanvas);
 
@@ -123,20 +133,56 @@
       }
     }
 </script>
+
 <style>
+  .zis{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    color: gainsboro;
+  }
+  .num1{
+    width: 160px;
+    height: 200px;
+    /*background-color: red;*/
+    border-radius: 5px;
+    border: 1px dashed gainsboro;
+    margin: 20px;
+    overflow: hidden;
+  }
+  .num1:hover{
+    border: 1px dashed deepskyblue;
+  }
+  .num2{
+    width: 100%;
+    height: 140px;
+    /*background-color: greenyellow;*/
+    background-image: url("../../static/img/1img.png");
+    background-size: 100% 100%;
+  }
+  .num2 img{
+    width: 100%;
+    height: 140px;
+    border-radius: 5px 5px 0 0;
+    background-size: 100% 100%;
+  }
+  #change{
+    display: none;
+  }
   *{
     margin: 0;
     padding: 0;
   }
   #demo #button {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 803px;
+    top: 435px;
     width: 80px;
     height: 40px;
     border:none;
+    color: white;
     border-radius: 5px;
-    background:white;
+    background:red;
   }
   #demo .show {
     width: 100px;
@@ -156,12 +202,15 @@
   }
   #demo .container {
     z-index: 99;
+    width: 100%;
     position: fixed;
     padding-top: 60px;
+    /*margin-left: -40px;*/
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
+    opacity: 0.5;
     background:rgba(0,0,0,1);
   }
 
@@ -218,10 +267,10 @@
   .cropper-crop-box,
   .cropper-modal {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
   }
 
   .cropper-wrap-box {
@@ -239,19 +288,15 @@
   .cropper-view-box {
     display: block;
     overflow: hidden;
-
     width: 100%;
     height: 100%;
-
     outline: 1px solid #39f;
     outline-color: rgba(51, 153, 255, 0.75);
   }
 
   .cropper-dashed {
     position: absolute;
-
     display: block;
-
     opacity: .5;
     border: 0 dashed #eee
   }
