@@ -95,6 +95,7 @@
     width: 1200px;
     margin: auto;
     margin-top: 20px;
+    overflow: hidden;
   }
   .news_list_everyone{
     width: 900px;
