@@ -46,7 +46,19 @@
                                          class="small_logo"></li>
             <li class="after_login">15734121521<span ref="myrou" class="glyphicon glyphicon-menu-down"
                                                      aria-hidden="true"></span></li>
-
+            <div class="el-menu--horizontal"
+                 style="position: fixed; top: 65px; left: 1120px; z-index: 2066;"
+                 x-placement="bottom-start" ref="personu">
+              <ul role="menu" class="el-menu el-menu--popup el-menu--popup-bottom-start" ref="personOpe" style="display: none">
+                <li role="menuitem" tabindex="-1" class="el-menu-item_1 is-active"><a href="/app.html#/personal"
+                                                                                      style="color: rgb(151, 155, 159); text-decoration: none;"><img
+                  src="http://yefengedu.com/static//images//v2.0/img/user.png" alt="" width="16"><span
+                  style="vertical-align: middle; padding-left: 10px;">个人中心</span></a></li>
+                <li role="menuitem" tabindex="-1" class="el-menu-item_1" style="color: rgb(151, 155, 159);"><img
+                  src="http://yefengedu.com/static//images//v2.0/img/remind.png" alt="" width="16"><span
+                  style="vertical-align: middle; padding-left: 10px;">退出登录</span></li>
+              </ul>
+            </div>
           </ul>
         </nav>
       </div>
@@ -97,19 +109,7 @@
     <div class="copyright">
       <div class="copyright-container"><p>上海晔枫教育科技有限公司 © 2009-2018 yefengedu.com 版权所有 ICP证：【沪ICP备18019568号-1】</p></div>
     </div>
-    <div class="el-menu--horizontal"
-         style="position: fixed; top: 65px; left: 1187px; z-index: 2066; "
-         x-placement="bottom-start">
-      <ul role="menu" class="el-menu el-menu--popup el-menu--popup-bottom-start">
-        <li role="menuitem" tabindex="-1" class="el-menu-item_1 is-active"><a href="/app.html#/personal"
-                                                                            style="color: rgb(151, 155, 159); text-decoration: none;"><img
-          src="http://yefengedu.com/static//images//v2.0/img/user.png" alt="" width="16"><span
-          style="vertical-align: middle; padding-left: 10px;">个人中心</span></a></li>
-        <li role="menuitem" tabindex="-1" class="el-menu-item_1" style="color: rgb(151, 155, 159);"><img
-          src="http://yefengedu.com/static//images//v2.0/img/remind.png" alt="" width="16"><span
-          style="vertical-align: middle; padding-left: 10px;">退出登录</span></li>
-      </ul>
-    </div>
+
   </div>
 </template>
 <script>
@@ -121,12 +121,15 @@
       enter() {
         this.$refs.myrou.style.transform = 'rotate(180deg)';
         this.$refs.myrou.style.transition = '0.5s ease-in-out'
+        this.$refs.personOpe.style.display='block';
+
 
 
       },
       leave() {
         this.$refs.myrou.style.transform = 'rotate(-360deg)';
         this.$refs.myrou.style.transition = 'all 0.5s ease-in-out'
+        this.$refs.personOpe.style.display='none';
       }
 
     }

@@ -25,7 +25,7 @@
     </div>
 
   </div>
-  </div>
+
 </template>
 <script>
   import Cropper from 'cropperjs'
