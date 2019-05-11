@@ -16,9 +16,12 @@ import axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import '../node_modules/swiper/dist/js/swiper.min.js'
-Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper);
 Vue.prototype.$axios= axios;
-Vue.use(ElementUI)
+Vue.use(ElementUI);
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts;
+
 Vue.filter('moment', function (value, formatString) {
   formatString = formatString || 'YYYY-MM-DD HH:mm:ss';
   return moment(value).format(formatString);

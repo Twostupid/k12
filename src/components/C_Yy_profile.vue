@@ -11,7 +11,7 @@
     <!-- 遮罩层 -->
     <div class="container" v-show="panel">
       <div>
-        <img id="image" :src="url" alt="Picture" >
+        <img id="image" :src="url" alt="Picture">
       </div>
       <button type="button" id="button" @click="crop">确定裁剪</button>
     </div>
@@ -90,7 +90,7 @@
 
         },
         crop() {
-
+            console.log(this.url)
           this.$router.push({path:'/personal/profile', query: {num:this.url}})
           this.panel = false;
           var croppedCanvas;
@@ -175,8 +175,8 @@
   }
   #demo #button {
     position: absolute;
-    right: 803px;
-    top: 435px;
+    right: 1040px;
+    top: 433px;
     width: 80px;
     height: 40px;
     border:none;
@@ -267,10 +267,10 @@
   .cropper-crop-box,
   .cropper-modal {
     position: absolute;
-    /*top: 0;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
   .cropper-wrap-box {
@@ -288,15 +288,19 @@
   .cropper-view-box {
     display: block;
     overflow: hidden;
+
     width: 100%;
     height: 100%;
+
     outline: 1px solid #39f;
     outline-color: rgba(51, 153, 255, 0.75);
   }
 
   .cropper-dashed {
     position: absolute;
+
     display: block;
+
     opacity: .5;
     border: 0 dashed #eee
   }
