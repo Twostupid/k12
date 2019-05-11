@@ -113,6 +113,28 @@ export default new Router({
           name: 'address',
           component: (resolve) => require(['../components/C_dm_address.vue'], resolve)
         },
+        {
+          path: 'order',
+          name: 'order',
+          component: (resolve) => require(['../components/C_ey_order.vue'], resolve)
+        },
+        {
+          path: 'course',
+          name: 'course',
+          component: (resolve) => require(['../components/C_ey_course.vue'], resolve)
+        },
+        {
+          path: 'bps',
+          name: 'bps',
+          component: (resolve) => require(['../components/C_ey_bps.vue'], resolve)
+        },
+        {
+          path: 'grow',
+          name: 'grow',
+          component: (resolve) => require(['../components/C_ey_grow.vue'], resolve)
+        },
+
+
       ]
     },
 
