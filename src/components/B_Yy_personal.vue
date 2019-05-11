@@ -38,6 +38,7 @@
       <router-link to="/personal/customs">关卡兑换券</router-link></li>
     <li><router-link to="/personal/password">修改密码</router-link></li>
     <h2>账号管理</h2>
+
     <li><router-link to="">账户信息</router-link></li>
     <li><router-link to="">账户充值</router-link></li>
     <li><router-link to="">充值记录</router-link></li>
