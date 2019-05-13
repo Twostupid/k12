@@ -113,6 +113,58 @@ export default new Router({
           name: 'address',
           component: (resolve) => require(['../components/C_dm_address.vue'], resolve)
         },
+        {
+          path: 'order',
+          name: 'order',
+          component: (resolve) => require(['../components/C_ey_order.vue'], resolve)
+        },
+        {
+          path: 'course',
+          name: 'course',
+          component: (resolve) => require(['../components/C_ey_course.vue'], resolve)
+        },
+        {
+          path: 'bps',
+          name: 'bps',
+          component: (resolve) => require(['../components/C_ey_bps.vue'], resolve)
+        },
+        {
+          path: 'grow',
+          name: 'grow',
+          component: (resolve) => require(['../components/C_ey_grow.vue'], resolve)
+        },
+
+
+        //修改密码
+        {
+          path: 'password',
+          name: 'password',
+          component: (resolve) => require(['../components/C_Yy_pwssmi.vue'], resolve)
+        },
+        //关卡兑换劵
+        {
+          path: 'customs',
+          name: 'customs',
+          component: (resolve) => require(['../components/C_Yy_customs.vue'], resolve)
+        },
+        //课程兑换券
+        {
+          path: 'course',
+          name: 'course',
+          component: (resolve) => require(['../components/C_Yy_course.vue'], resolve)
+        },
+        //勋章图
+        {
+          path: 'medal',
+          name: 'medal',
+          component: (resolve) => require(['../components/C_Yy_medal.vue'], resolve)
+        },
+        //关卡进度
+        {
+          path: 'progress',
+          name: 'progress',
+          component: (resolve) => require(['../components/C_Yy_progress.vue'], resolve)
+        },
       ]
     },
 

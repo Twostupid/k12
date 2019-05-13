@@ -83,6 +83,22 @@ body {
   padding: 0;
   line-height: 30px;
   height: 30px;
+  text-align: left;
+}
+/*用户中心小框*/
+.el-menu-item_1{
+  font-size: 14px;
+  color: #332c2f;
+  margin: 15px 25px;
+  padding: 0;
+  line-height: 30px;
+  height: 20px;
+  width: 100px;
+  margin-top: 0;
+  margin-left: 0;
+}
+.el-menu-item_1 img span{
+
 }
 
 .menus .el-menu-item:hover {
@@ -570,6 +586,7 @@ height: 60%;
   float: left; margin-top: 20px;
 
 }
+
 
 
 

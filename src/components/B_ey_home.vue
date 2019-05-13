@@ -299,7 +299,7 @@
           class="el-dialog__close el-icon el-icon-close"></i></button>
       </div>
       <div class="el-dialog__body">
-        <video
+        <video v-if="flag"
           src="http://video.yefengedu.com/9caf9bbeb1134893b7f8f6657e8ea090/59e802771a1c4a829a971754fa0447dd-64538795cae0fc059c2d62659a89baa6-od-S00000001-200000.mp4"
           controls="controls" autoplay="autoplay" width="100%" controlslist="nodownload" id="stopVideo">
           您的浏览器不支持 video 标签。
