@@ -293,7 +293,7 @@
     </section>
 
     <!--视频弹窗-->
-    <div class="vedioStyle" style="position: fixed;top:0;z-index: 9999; background-color: rgba(0,0,0,.5); width: 1583px; height:1000px;" v-show="flag">
+    <div class="vedioStyle" style="position: fixed;top:0;z-index: 9999; background-color: rgba(0,0,0,.5); width: 100%; height:1000px;" v-show="flag">
       <div role="dialog" aria-modal="true" aria-label="视频" class="el-dialog video-wrap" style=" margin-top:5%;width:50%;">
 
 
@@ -308,8 +308,7 @@
           您的浏览器不支持 video 标签。
         </video>
       </div>
-      <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
-                                                                         class="el-button el-button--primary" @click="video"><!---->
+      <div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--primary" @click="video"><!---->
         <!----><span>确 定</span></button></span></div>
     </div>
     </div>

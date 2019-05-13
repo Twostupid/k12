@@ -1,7 +1,7 @@
 <template>
     <div class="buildingall">
       <header>
-        <img src="../../static/img/banner.a5807c4.png" class="header_img">
+        <img src="../../../../static/img/banner.a5807c4.png" class="header_img">
       </header>
       <div class="main_up">
 
