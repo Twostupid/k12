@@ -2,12 +2,12 @@
     <div class="help_father">
       <div class="help_father_left">
         <ul>
-          <router-link to="/help/understand"><li class="help_everyone">了解晔枫</li></router-link>
-          <router-link to="/help/joinus"><li class="help_everyone">加入晔枫</li></router-link>
-          <router-link to="/help/problem"><li class="help_everyone">常见问题</li></router-link>
-          <router-link to="/help/agreement"><li class="help_everyone">用户协议</li></router-link>
-          <router-link to="/help/disclaimer"><li class="help_everyone">免责声明</li></router-link>
-          <router-link to="/help/privacy"><li class="help_everyone">隐私策略</li></router-link>
+          <li class="help_everyone"><router-link to="/help/understand" active-class = "num2">了解晔枫</router-link></li>
+          <li class="help_everyone" ><router-link to="/help/joinus" active-class = "num2">加入晔枫</router-link></li>
+          <li class="help_everyone" ><router-link to="/help/problem" active-class = "num2">常见问题</router-link></li>
+          <li class="help_everyone"  ><router-link to="/help/agreement" active-class = "num2">用户协议</router-link></li>
+          <li class="help_everyone"  ><router-link to="/help/disclaimer" active-class = "num2">免责声明</router-link></li>
+          <li class="help_everyone"  ><router-link to="/help/privacy" active-class = "num2">隐私策略</router-link></li>
         </ul>
       </div>
       <div class="help_father_right">
@@ -18,11 +18,19 @@
 
 <script>
     export default {
-        name: "B_dm_helpcentre"
+        name: "B_dm_helpcentre",
+      data() {
+
+      },
+      methods: {
+
+
+      }
     }
 </script>
 
 <style scoped>
+
   .help_father{
     width: 1200px;
     margin: auto;
@@ -30,7 +38,7 @@
   }
   .help_father_left{
     width: 262px;
-    height: 360px;
+    /*height: 360px;*/
     background-color: white;
     margin-right: 20px;
     float: left;
@@ -41,9 +49,21 @@
     line-height: 60px;
     text-align: center;
     font-size: 16px;
+    margin-bottom: 0px !important;
   }
   .help_father_right{
     float: left;
   }
+  .num2{
+    display: inline-block;
+    height: 60px;
+    width: 257px;
+
+    border-left: 5px solid red;
+    position: relative;
+    float: left;
+  }
+
+
 
 </style>

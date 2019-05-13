@@ -149,9 +149,9 @@ export default new Router({
         },
         //课程兑换券
         {
-          path: 'course',
-          name: 'course',
-          component: (resolve) => require(['../components/C_Yy_course.vue'], resolve)
+          path: 'courses',
+          name: 'courses',
+          component: (resolve) => require(['../components/C_Yy_courses.vue'], resolve)
         },
         //勋章图
         {
@@ -165,6 +165,11 @@ export default new Router({
           name: 'progress',
           component: (resolve) => require(['../components/C_Yy_progress.vue'], resolve)
         },
+        {
+          path:'consume',
+          name:'consume',
+          component:(resolve) => require(['../components/C_dm_consume.vue'], resolve)
+        }
       ]
     },
 
