@@ -3,23 +3,34 @@
       <div class="help_father_left">
         <ul>
           <router-link to="/help/understand"><li class="help_everyone">了解晔枫</li></router-link>
-          <router-link to="/help/joinus"><li class="help_everyone">加入晔枫</li></router-link>
+          <router-link to="/help/joinus"><li class="help_everyone" >加入晔枫</li></router-link>
           <router-link to="/help/problem"><li class="help_everyone">常见问题</li></router-link>
           <router-link to="/help/agreement"><li class="help_everyone">用户协议</li></router-link>
           <router-link to="/help/disclaimer"><li class="help_everyone">免责声明</li></router-link>
-          <router-link to="/help/privacy"><li class="help_everyone">隐私策略</li></router-link>
+          <router-link to="/help/privacy"><li class="help_everyone" >隐私策略</li></router-link>
         </ul>
       </div>
       <div class="help_father_right">
-
         <router-view></router-view>
       </div>
     </div>
 </template>
 
 <script>
+  var obj={flag:'',};
     export default {
-        name: "B_dm_helpcentre"
+        name: "B_dm_helpcentre",
+      data(){
+          return{
+            flag:false,
+            num2:'num2'
+          }
+      },
+      methods:{
+        flags(){
+          this.flag=true
+        }
+      }
     }
 </script>
 
@@ -46,6 +57,10 @@
   .help_father_right{
     float: left;
 
+  }
+  .num2{
+    background-color: red;
+    color: red;
   }
 
 </style>

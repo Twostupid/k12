@@ -86,6 +86,10 @@
       mounted(){
         this.getdata();
         this.jumppage();
+
+      },
+      beforeCreate(){
+          console.log(this.pagenumb)
       }
     }
 </script>
