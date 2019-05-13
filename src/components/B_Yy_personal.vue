@@ -22,30 +22,24 @@
       <router-link to="/personal/address">收货地址</router-link>
     </li>
     <li>
-      <router-link to="">我的订单</router-link>
+      <router-link to="/personal/order">我的订单</router-link>
     </li>
-    <li>
-      <router-link to="">我的课程</router-link>
-    </li>
+
     <li>
       <router-link to="/personal/course">我的课程</router-link>
     </li>
 
     <li>
       <router-link to="/personal/bps">我的积分</router-link>
-      <router-link to="">我的积分</router-link>
+
     </li>
     <li><router-link to="/personal/grow">我的成长值</router-link></li>
-    <li><router-link to="">关卡进度</router-link></li>
-    <li><router-link to="">勋章墙</router-link></li>
-    <li><router-link to="">课程兑换券</router-link></li>
-    <li><router-link to="">我的成长值</router-link></li>
     <li><router-link to="/personal/progress">关卡进度</router-link></li>
     <li><router-link to="/personal/medal">勋章墙</router-link></li>
-    <li><router-link to="/personal/course">课程兑换券</router-link></li>
+    <li><router-link to="/personal/courses">课程兑换券</router-link></li>
     <li class="juan">
-      <router-link to="">关卡兑换券</router-link></li>
-    <li><router-link to="">修改密码</router-link></li>
+      <router-link to="/personal/customs">关卡兑换券</router-link></li>
+    <li><router-link to="/personal/password">修改密码</router-link></li>
     <h2>账号管理</h2>
     <li><router-link to="">账户信息</router-link></li>
     <li><router-link to="">账户充值</router-link></li>
