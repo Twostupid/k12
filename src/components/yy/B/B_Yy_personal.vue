@@ -1,14 +1,14 @@
 <template>
-    <div class="box">
-      <div class="personal">
-<!--      左面-->
+  <div class="box">
+    <div class="personal">
+      <!--      左面-->
 
-<div class="left">
-    <h3 class="left_one">个人中心</h3>
-<!--  图片-->
-  <div class="imgs">
-    <img :src="url" alt="">
-  </div>
+      <div class="left">
+        <h3 class="left_one">个人中心</h3>
+        <!--  图片-->
+        <div class="imgs">
+          <img :src="url" alt="">
+        </div>
 
         <ul class="left_personal">
           <h2>个人信息</h2>
@@ -39,7 +39,7 @@
             <router-link to="/personal/customs" active-class = "active">关卡兑换券</router-link></li>
           <li><router-link to="/personal/password" active-class = "active">修改密码</router-link></li>
           <h2>账号管理</h2>
-          <li><router-link to="/personal/1" active-class = "active">账户信息</router-link></li>
+          <li><router-link to="/personal/message" active-class = "active">账户信息</router-link></li>
           <li><router-link to="/personal/2" active-class = "active">账户充值</router-link></li>
           <li><router-link to="/personal/3" active-class = "active">充值记录</router-link></li>
           <li><router-link to="/personal/consume" active-class = "active">消费计录</router-link></li>
@@ -63,6 +63,9 @@
       }
     },
     methods:{
+      num(){
+        this.url=this.$route.query.num
+      }
 
     },
     watch:{

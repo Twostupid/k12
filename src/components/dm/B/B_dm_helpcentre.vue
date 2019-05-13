@@ -18,19 +18,11 @@
 
 <script>
     export default {
-        name: "B_dm_helpcentre",
-      data() {
-
-      },
-      methods: {
-
-
-      }
+        name: "B_dm_helpcentre"
     }
 </script>
 
 <style scoped>
-
   .help_father{
     width: 1200px;
     margin: auto;
