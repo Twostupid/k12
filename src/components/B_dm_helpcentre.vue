@@ -11,7 +11,6 @@
         </ul>
       </div>
       <div class="help_father_right">
-
         <router-view></router-view>
       </div>
     </div>
@@ -45,7 +44,6 @@
   }
   .help_father_right{
     float: left;
-
   }
 
 </style>
