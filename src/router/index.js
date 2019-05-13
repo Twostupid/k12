@@ -172,11 +172,11 @@ export default new Router({
           component: (resolve) => require(['../components/yy/C/C_Yy_message.vue'], resolve)
         },
 
-        // {
-        //   path:'consume',
-        //   name:'consume',
-        //   // component:(resolve) => require(['../components/C_dm_consume.vue'], resolve)
-        // }
+        {
+          path:'consume',
+          name:'consume',
+          component:(resolve) => require(['../components/dm/C/C_dm_consume.vue'], resolve)
+        }
       ]
     },
 

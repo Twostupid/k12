@@ -50,8 +50,7 @@
                  style="position: fixed; top: 65px; left: 1120px; z-index: 2066;"
                  x-placement="bottom-start" ref="personu">
               <ul role="menu" class="el-menu el-menu--popup el-menu--popup-bottom-start" ref="personOpe" style="display: none">
-                <li role="menuitem" tabindex="-1" class="el-menu-item_1 is-active"><a href="/app.html#/personal"
-                                                                                      style="color: rgb(151, 155, 159); text-decoration: none;"><img
+                <li role="menuitem" tabindex="-1" class="el-menu-item_1 is-active"><a href="/app.html#/personal" style="color: rgb(151, 155, 159); text-decoration: none;"><img
                   src="http://yefengedu.com/static//images//v2.0/img/user.png" alt="" width="16"><span
                   style="vertical-align: middle; padding-left: 10px;">个人中心</span></a></li>
                 <li role="menuitem" tabindex="-1" class="el-menu-item_1" style="color: rgb(151, 155, 159);"><img
