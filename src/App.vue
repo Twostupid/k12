@@ -28,6 +28,7 @@
             </li>
           </ul>
           <ul class="user-area el-menu" @mouseenter="enter" @mouseleave="leave">
+
             <!--<router-link to="/register">-->
             <!--<li class="el-menu-item is-active text-active register  btn-hover">-->
             <!--<router-link to="/register" class="ulinkr">注册-->
@@ -146,5 +147,6 @@
     margin: 0px;
     padding: 0px;
   }
+
 
 </style>

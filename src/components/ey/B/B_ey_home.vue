@@ -272,19 +272,19 @@
         <div class="row">
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
             <div class="section-content">
-              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section1.png" width="380"
+              <router-link to="/payment?number=0"><img src="http://yefengedu.com/static//images//v2.0/section1.png" width="380"
                                        height="533" class="img-responsive taocanyi"></router-link>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
             <div class="section-content">
-              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section2.png" width="380"
+              <router-link to="/payment?number=1"><img src="http://yefengedu.com/static//images//v2.0/section2.png" width="380"
                                        height="533" class="img-responsive taocaner"></router-link>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
             <div class="section-content">
-              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section3.png" width="380"
+              <router-link to="/payment?number=2"><img src="http://yefengedu.com/static//images//v2.0/section3.png" width="380"
                                        height="533" class="img-responsive taocansan"></router-link>
             </div>
           </div>

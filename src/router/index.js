@@ -16,6 +16,12 @@ export default new Router({
       name: 'home',
       component: (resolve) => require(['../components/yy/B/B_Yy_lgion.vue'],resolve)
     },
+    //付款
+    {
+      path: '/payment',
+      name: 'payment',
+      component: (resolve) => require(['../components/ey/B/B_ey_payment.vue'],resolve)
+    },
     //积木编程
 
     {
