@@ -70,7 +70,6 @@
     },
     watch:{
       $route(to,from){
-
         this.url=this.$route.query.num
       }
     }

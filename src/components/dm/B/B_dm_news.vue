@@ -1,99 +1,97 @@
 <template>
-    <div class="news_all">
-      <div class="news_left">
-        <div class="news_list">
-
-            <div class="news_list_everyone" v-for="item in list">
-              <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
-              <div class="news_list_everyone_main">
-                <router-link to="/news/fouse">
-                <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
-                </router-link>
-                <span>{{item.time|moment}}</span>
-              </div>
+  <div class="news_all">
+    <div class="news_left">
+      <div class="news_list">
+        <div class="news_list_everyone" v-for="item in list">
+          <router-link :to="{path: '/journalism', query: {ids:item.id}}">
+            <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
+            <div class="news_list_everyone_main">
+              <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
+              <span>{{item.time|moment}}</span>
             </div>
 
-
-        </div>
-        <div class="pager">
-          <span>共 {{count}} 条</span>&nbsp;
-          <div>
-            <select >
-              <option value="10" @click="jumppage(1,10)">10</option>
-              <option value="20" @click="jumppage(1,20)">20</option>
-              <option value="50" @click="jumppage(1,30)">30</option>
-            </select>
-            &nbsp;
-          </div>
-          <a @click="jumppage(1,10)" class="glyphicon glyphicon-menu-left" style="margin-top: 17px"></a>
-          <span v-for="item in pagenumb" @click="jumppage(item,10)">{{item}}</span>
-          <a @click="jumppage(2,10)" class="glyphicon glyphicon-menu-right" style="margin-top: 17px"></a>
-          <div class="goto">
-            前往&nbsp;&nbsp;<input type="text" @input="jumppage(pagenow,10)"/>&nbsp;&nbsp;页
-          </div>
-          </div>
-        </div>
-      <div class="news_right">
-        <img src="http://yefengedu.com/static/img/banner.3eee7fe.jpg" alt="">
-        <div class="news_right_title">
-          热门资讯
-        </div>
-        <div class="news_right_new" >
-          <router-link to="/">
-            <div class="news_right_new_small" v-for="(item, index) in list" v-if='index<5'>
-              <div class="new_small_father">
-                <span class="small_col">{{index+1}}</span>
-                <span class="small_title">{{item.name}}</span>
-              </div>
-            </div>
           </router-link>
         </div>
       </div>
+      <div class="pager">
+        <span>共 {{count}} 条</span>&nbsp;
+        <div>
+          <select>
+            <option value="10" @click="jumppage(1,10)">10</option>
+            <option value="20" @click="jumppage(1,20)">20</option>
+            <option value="50" @click="jumppage(1,30)">30</option>
+          </select>
+          &nbsp;
+        </div>
+        <a @click="jumppage(1,10)" class="glyphicon glyphicon-menu-left" style="margin-top: 17px"></a>
+        <span v-for="item in pagenumb" @click="jumppage(item,10)">{{item}}</span>
+        <a @click="jumppage(2,10)" class="glyphicon glyphicon-menu-right" style="margin-top: 17px"></a>
+        <div class="goto">
+          前往&nbsp;&nbsp;<input type="text" @input="jumppage(pagenow,10)"/>&nbsp;&nbsp;页
+        </div>
+      </div>
     </div>
+    <div class="news_right">
+      <img src="http://yefengedu.com/static/img/banner.3eee7fe.jpg" alt="">
+      <div class="news_right_title">
+        热门资讯
+      </div>
+      <div class="news_right_new">
+        <router-link to="/">
+          <div class="news_right_new_small" v-for="(item, index) in list" v-if='index<5'>
+            <div class="new_small_father">
+              <span class="small_col">{{index+1}}</span>
+              <span class="small_title">{{item.name}}</span>
+            </div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "B_dm_news",
-        data(){
-            return{
-              list:"",
-              pagenumb:'',
-              pagesize:10,
-              count:"",
-              pagenow:'1'//当前第几页
-            }
-        },
-        methods:{
-          getdata(){
-            this.$axios.get('/api/course/categories').then(res=> {
-              let dataone = res.data;
-              // console.log(dataone);
-              this.pagenumb = Number(dataone.data.length)/this.pagesize;
-              this.count = dataone.data.length
-            })
-          },
-          jumppage(a,b){
-            if (a==1){
-              this.pagenow--;
-            }else if (a==2){
-              this.pagenow++;
-            }
-            this.$axios.get('/api/course/categories?page='+this.pagenow+'&size='+this.pagesize+'').then(res=>{
-              console.log(res.data.data);
-              this.list = res.data.data
-            })
-          },
-        },
-      mounted(){
-        this.getdata();
-        this.jumppage();
-
-      },
-      beforeCreate(){
-          console.log(this.pagenumb)
+  export default {
+    name: "B_dm_news",
+    data() {
+      return {
+        list: "",
+        pagenumb: '',
+        pagesize: 10,
+        count: "",
+        pagenow: '1'//当前第几页
       }
+    },
+    methods: {
+      getdata() {
+        this.$axios.get('/api/course/categories').then(res => {
+          let dataone = res.data;
+          // console.log(dataone);
+          this.pagenumb = Number(dataone.data.length) / this.pagesize;
+          this.count = dataone.data.length
+        })
+      },
+      jumppage(a, b) {
+        if (a == 1) {
+          this.pagenow--;
+        } else if (a == 2) {
+          this.pagenow++;
+        }
+        this.$axios.get('/api/course/categories?page=' + this.pagenow + '&size=' + this.pagesize + '').then(res => {
+          console.log(res.data.data);
+          this.list = res.data.data
+        })
+      },
+    },
+    mounted() {
+      this.getdata();
+      this.jumppage();
+
+    },
+    beforeCreate() {
+      console.log(this.pagenumb)
     }
+  }
 </script>
 
 <style scoped>
@@ -159,18 +157,20 @@
   .news_right_title{
     width: 230px;
     height: 16px;
-    margin-top:25px;
+    margin-top: 25px;
     margin-bottom: 15px;
     font-size: 16px;
     color: #4c5561;
   }
-  .news_right_new{
+
+  .news_right_new {
     width: 230px;
     height: 140px;
     border-top: 1px solid gray;
     padding-top: 15px;
   }
-  .small_col{
+
+  .small_col {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -183,12 +183,13 @@
     font-size: 12px;
     float: left;
   }
-  .small_title{
+
+  .small_title {
     display: inline-block;
     width: 150px;
     height: 20px;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 12px;
     line-height: 20px;
@@ -197,7 +198,8 @@
     margin-left: 10px;
     letter-spacing: 2px;
   }
-  .new_small_father{
+
+  .new_small_father {
     width: 230px;
     height: 20px;
     margin-bottom: 5px;
@@ -217,19 +219,21 @@
     margin-bottom: 40px;
   }
 
-  .pager input,.pager select{
-    height:30px;
-    line-height:40px;
-    outline:none;
-    border:1px solid #888;
-    padding:10px;
-    box-sizing:border-box;
+  .pager input, .pager select {
+    height: 30px;
+    line-height: 40px;
+    outline: none;
+    border: 1px solid #888;
+    padding: 10px;
+    box-sizing: border-box;
   }
-  .pager input{
+
+  .pager input {
     width: 40px;
     height: 30px;
   }
-  .pager .goto{
+
+  .pager .goto {
     margin-left: 20px;
   }
   .pager a{
@@ -237,7 +241,8 @@
     font-weight: bold;
     text-decoration: none;
   }
-  .pager a:hover{
+
+  .pager a:hover {
     color: green;
   }
 </style>
