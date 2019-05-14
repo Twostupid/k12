@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--lx-->
-    <header id="header" class="header">
+    <header id="header" class="header" v-model="headstyle">
       <div class="container">
         <nav class="nav-bar">
           <router-link to="/homep" class="logo">
@@ -115,6 +115,11 @@
 
   export default {
     name: 'App',
+    data(){
+      return{
+        headstyle:""
+      }
+    },
     components: {},
     methods: {
       enter() {

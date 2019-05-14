@@ -11,17 +11,20 @@
       <!-- 轮播（Carousel）项目 -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1108673879162884096" alt="First slide">
+          <img v-bind:src="list[0].img" v-bind:alt="list[0].alt">
+        </div>
+
+        <div class="item">
+          <img v-bind:src="list[1].img" v-bind:alt="list[0].alt">
         </div>
         <div class="item">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1098788297024606208" alt="Second slide">
+          <img v-bind:src="list[2].img" v-bind:alt="list[0].alt">
         </div>
         <div class="item">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1091516534293139456" alt="Third slide">
+          <img v-bind:src="list[3].img" v-bind:alt="list[0].alt">
         </div>
-        <div class="item">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1086203092736806912" alt="for slide">
-        </div>
+
+
 
       </div>
       <!-- 轮播（Carousel）导航 -->
@@ -325,6 +328,14 @@
     },
     data() {
       return {
+        list:[
+
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1108673879162884096',alt:'First slide'},
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1098788297024606208',alt:'Second slide'},
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1091516534293139456',alt:'Third slide'},
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1086203092736806912',alt:'for slide'},
+        ],
+        active:'active',
         flag:false,
         swiperOption: {
           notNextTick: true,
@@ -378,6 +389,7 @@
       }
     },
 
+
     mounted() {
       //这边就可以使用swiper这个对象或使用swiper官网中的方法
       // var that=this;
@@ -395,6 +407,14 @@
         }
     },
     methods:{
+      // getdata(){
+      //   this.$axios.get('/api/course/categories').then(res=> {
+      //     let dataone = res.data;
+      //     // console.log(dataone);
+      //     this.pagenumb = Number(dataone.data.length)/this.pagesize;
+      //     this.count = dataone.data.length
+      //   })
+      // },
       video(){
         this.flag=!this.flag;
       }
