@@ -50,7 +50,6 @@
     display: inline-block;
     height: 60px;
     width: 257px;
-
     border-left: 5px solid red;
     position: relative;
     float: left;

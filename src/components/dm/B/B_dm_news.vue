@@ -2,15 +2,17 @@
     <div class="news_all">
       <div class="news_left">
         <div class="news_list">
-          <router-link to="/">
+
             <div class="news_list_everyone" v-for="item in list">
               <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
               <div class="news_list_everyone_main">
+                <router-link to="/news/fouse">
                 <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
+                </router-link>
                 <span>{{item.time|moment}}</span>
               </div>
             </div>
-          </router-link>
+
 
         </div>
         <div class="pager">

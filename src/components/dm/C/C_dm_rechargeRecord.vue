@@ -1,10 +1,10 @@
 <template>
-
+    
 </template>
 
 <script>
     export default {
-        name: "C_dm_loding"
+        name: "C_dm_rechargeRecord"
     }
 </script>
 
