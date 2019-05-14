@@ -11,17 +11,20 @@
       <!-- 轮播（Carousel）项目 -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1108673879162884096" alt="First slide">
+          <img v-bind:src="list[0].img" v-bind:alt="list[0].alt">
+        </div>
+
+        <div class="item">
+          <img v-bind:src="list[1].img" v-bind:alt="list[0].alt">
         </div>
         <div class="item">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1098788297024606208" alt="Second slide">
+          <img v-bind:src="list[2].img" v-bind:alt="list[0].alt">
         </div>
         <div class="item">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1091516534293139456" alt="Third slide">
+          <img v-bind:src="list[3].img" v-bind:alt="list[0].alt">
         </div>
-        <div class="item">
-          <img src="http://yf-code-images.oss-cn-beijing.aliyuncs.com/1086203092736806912" alt="for slide">
-        </div>
+
+
 
       </div>
       <!-- 轮播（Carousel）导航 -->
@@ -269,19 +272,19 @@
         <div class="row">
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
             <div class="section-content">
-              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section1.png" width="380"
+              <router-link to="/payment?number=0"><img src="http://yefengedu.com/static//images//v2.0/section1.png" width="380"
                                        height="533" class="img-responsive taocanyi"></router-link>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
             <div class="section-content">
-              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section2.png" width="380"
+              <router-link to="/payment?number=1"><img src="http://yefengedu.com/static//images//v2.0/section2.png" width="380"
                                        height="533" class="img-responsive taocaner"></router-link>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
             <div class="section-content">
-              <router-link to="/"><img src="http://yefengedu.com/static//images//v2.0/section3.png" width="380"
+              <router-link to="/payment?number=2"><img src="http://yefengedu.com/static//images//v2.0/section3.png" width="380"
                                        height="533" class="img-responsive taocansan"></router-link>
             </div>
           </div>
@@ -290,7 +293,7 @@
     </section>
 
     <!--视频弹窗-->
-    <div class="vedioStyle" style="position: fixed;top:0;z-index: 9999; background-color: rgba(0,0,0,.5); width: 1583px; height:1000px;" v-show="flag">
+    <div class="vedioStyle" style="position: fixed;top:0;z-index: 9999; background-color: rgba(0,0,0,.5); width: 100%; height:1000px;" v-show="flag">
       <div role="dialog" aria-modal="true" aria-label="视频" class="el-dialog video-wrap" style=" margin-top:5%;width:50%;">
 
 
@@ -305,8 +308,7 @@
           您的浏览器不支持 video 标签。
         </video>
       </div>
-      <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
-                                                                         class="el-button el-button--primary" @click="video"><!---->
+      <div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--primary" @click="video"><!---->
         <!----><span>确 定</span></button></span></div>
     </div>
     </div>
@@ -326,6 +328,14 @@
     },
     data() {
       return {
+        list:[
+
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1108673879162884096',alt:'First slide'},
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1098788297024606208',alt:'Second slide'},
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1091516534293139456',alt:'Third slide'},
+          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1086203092736806912',alt:'for slide'},
+        ],
+        active:'active',
         flag:false,
         swiperOption: {
           notNextTick: true,
@@ -379,6 +389,7 @@
       }
     },
 
+
     mounted() {
       //这边就可以使用swiper这个对象或使用swiper官网中的方法
       // var that=this;
@@ -396,6 +407,14 @@
         }
     },
     methods:{
+      // getdata(){
+      //   this.$axios.get('/api/course/categories').then(res=> {
+      //     let dataone = res.data;
+      //     // console.log(dataone);
+      //     this.pagenumb = Number(dataone.data.length)/this.pagesize;
+      //     this.count = dataone.data.length
+      //   })
+      // },
       video(){
         this.flag=!this.flag;
       }

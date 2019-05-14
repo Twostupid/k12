@@ -13,38 +13,36 @@
         <ul class="left_personal">
           <h2>个人信息</h2>
           <li>
-            <router-link to="/personal/datum">完善资料</router-link>
+            <router-link to="/personal/datum"  active-class = "active">完善资料</router-link>
           </li>
           <li>
-            <router-link to="/personal/profile" >修改头像</router-link>
+            <router-link to="/personal/profile"  active-class = "active">修改头像</router-link>
           </li>
           <li>
-            <router-link to="/personal/address">收货地址</router-link>
+            <router-link to="/personal/address" active-class = "active">收货地址</router-link>
           </li>
           <li>
-            <router-link to="/personal/order">我的订单</router-link>
+            <router-link to="/personal/order" active-class = "active">我的订单</router-link>
+          </li>
+          <li>
+            <router-link to="/personal/course" active-class = "active">我的课程</router-link>
           </li>
 
           <li>
-            <router-link to="/personal/course">我的课程</router-link>
+            <router-link to="/personal/bps" active-class = "active">我的积分</router-link>
           </li>
-
-          <li>
-            <router-link to="/personal/bps">我的积分</router-link>
-
-          </li>
-          <li><router-link to="/personal/grow">我的成长值</router-link></li>
-          <li><router-link to="/personal/progress">关卡进度</router-link></li>
-          <li><router-link to="/personal/medal">勋章墙</router-link></li>
-          <li><router-link to="/personal/courses">课程兑换券</router-link></li>
+          <li><router-link to="/personal/grow" active-class = "active">我的成长值</router-link></li>
+          <li><router-link to="/personal/progress" active-class = "active">关卡进度</router-link></li>
+          <li><router-link to="/personal/medal" active-class = "active">勋章墙</router-link></li>
+          <li><router-link to="/personal/courses" active-class = "active">课程兑换券</router-link></li>
           <li class="juan">
-            <router-link to="/personal/customs">关卡兑换券</router-link></li>
-          <li><router-link to="/personal/password">修改密码</router-link></li>
+            <router-link to="/personal/customs" active-class = "active">关卡兑换券</router-link></li>
+          <li><router-link to="/personal/password" active-class = "active">修改密码</router-link></li>
           <h2>账号管理</h2>
-          <li><router-link to="/personal/message">账户信息</router-link></li>
-          <li><router-link to="">账户充值</router-link></li>
-          <li><router-link to="">充值记录</router-link></li>
-          <li><router-link to="">消费计录</router-link></li>
+          <li><router-link to="/personal/message" active-class = "active">账户信息</router-link></li>
+          <li><router-link to="/personal/buyPay" active-class = "active">账户充值</router-link></li>
+          <li><router-link to="/personal/rechargeRecord" active-class = "active">充值记录</router-link></li>
+          <li><router-link to="/personal/consume" active-class = "active">消费计录</router-link></li>
         </ul>
       </div>
       <!--      右面-->
@@ -62,8 +60,6 @@
     data(){
       return{
         url:"",
-
-
       }
     },
     methods:{
@@ -147,7 +143,7 @@
     height: 16px;
     /*margin-left: 40px;*/
     position: absolute;
-    color:rgb(0,0,0,0);
+    color:rgb(0,0,0);
     background-size: 100% 100%;
     background-image: url("http://yefengedu.com/static/images/v2.0/img/20190116164838.png");
   }
@@ -161,6 +157,14 @@
     width: 150px;
     height: 150px;
     background-size: 100% 100%;
+  }
+  .active{
+    display: inline-block;
+    height: 34px;
+    width: 188px;
+    border-left: 2px solid black;
+    position: relative;
+    float: left;
   }
 
 </style>

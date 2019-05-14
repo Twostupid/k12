@@ -1,4 +1,5 @@
-  <template>
+
+<template>
   <div>
     <transition name="my">
       <el-alert

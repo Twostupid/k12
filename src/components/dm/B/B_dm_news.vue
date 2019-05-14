@@ -1,4 +1,16 @@
 <template>
+    <div class="news_all">
+      <div class="news_left">
+        <div class="news_list">
+
+            <div class="news_list_everyone" v-for="item in list">
+              <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
+              <div class="news_list_everyone_main">
+                <router-link to="/news/fouse">
+                <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
+                </router-link>
+                <span>{{item.time|moment}}</span>
+              </div>
   <div class="news_all">
     <div class="news_left">
       <div class="news_list">
@@ -9,6 +21,8 @@
               <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
               <span>{{item.time|moment}}</span>
             </div>
+
+
           </router-link>
         </div>
       </div>
@@ -94,14 +108,13 @@
 </script>
 
 <style scoped>
-  .news_all {
+  .news_all{
     width: 1200px;
     margin: auto;
     margin-top: 20px;
     overflow: hidden;
   }
-
-  .news_list_everyone {
+  .news_list_everyone{
     width: 900px;
     height: 200px;
     padding: 25px;
@@ -110,46 +123,39 @@
     border-bottom: 1px solid #b2b2b2;
     color: #332c2f;
   }
-
-  .news_left {
+  .news_left{
     width: 900px;
     display: inline-block;
     float: left;
     margin-right: 20px;
   }
-
-  .news_list_everyone_img {
+  .news_list_everyone_img{
     width: 266px;
     height: 150px;
     display: inline-block;
     margin-right: 20px;
     float: left;
   }
-
-  .news_list_everyone_main {
+  .news_list_everyone_main{
     width: 462px;
     height: 150px;
     float: left;
     display: inline-block;
   }
-
-  .news_list_everyone_main > span {
+  .news_list_everyone_main>span{
     display: inline-block;
     margin-top: 20px;
   }
-
-  .everyone_main_title:hover {
+  .everyone_main_title:hover{
 
     color: #ff2a24;
     transition: all .5s;
   }
-
-  .news_list_everyone_main > span:hover {
+  .news_list_everyone_main>span:hover{
     color: #ff2a24;
     transition: all .5s;
   }
-
-  .news_right {
+  .news_right{
     width: 280px;
     height: 550px;
     background-color: white;
@@ -157,13 +163,11 @@
     display: inline-block;
     float: left;
   }
-
-  .news_right > img {
+  .news_right>img{
     width: 230px;
     height: 320px;
   }
-
-  .news_right_title {
+  .news_right_title{
     width: 230px;
     height: 16px;
     margin-top: 25px;
@@ -214,13 +218,12 @@
     margin-bottom: 5px;
     box-sizing: border-box;
   }
-
-  .pager > span, .pager > a, .pager > select, .pager > div {
+  .pager>span,.pager>a,.pager>select,.pager>div{
     float: left;
     margin-left: 10px;
   }
 
-  .pager {
+  .pager{
     width: 350px;
     margin: 0 auto;
     margin-top: 10px;
@@ -246,8 +249,7 @@
   .pager .goto {
     margin-left: 20px;
   }
-
-  .pager a {
+  .pager a{
     color: black;
     font-weight: bold;
     text-decoration: none;

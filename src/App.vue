@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--lx-->
-    <header id="header" class="header">
+    <header id="header" class="header" v-model="headstyle">
       <div class="container">
         <nav class="nav-bar">
           <router-link to="/homep" class="logo">
@@ -28,6 +28,7 @@
             </li>
           </ul>
           <ul class="user-area el-menu" @mouseenter="enter" @mouseleave="leave">
+
             <!--<router-link to="/register">-->
             <!--<li class="el-menu-item is-active text-active register  btn-hover">-->
             <!--<router-link to="/register" class="ulinkr">注册-->
@@ -50,8 +51,7 @@
                  style="position: fixed; top: 65px; left: 1120px; z-index: 2066;"
                  x-placement="bottom-start" ref="personu">
               <ul role="menu" class="el-menu el-menu--popup el-menu--popup-bottom-start" ref="personOpe" style="display: none">
-                <li role="menuitem" tabindex="-1" class="el-menu-item_1 is-active"><a href="/app.html#/personal"
-                                                                                      style="color: rgb(151, 155, 159); text-decoration: none;"><img
+                <li role="menuitem" tabindex="-1" class="el-menu-item_1 is-active"><a href="/app.html#/personal" style="color: rgb(151, 155, 159); text-decoration: none;"><img
                   src="http://yefengedu.com/static//images//v2.0/img/user.png" alt="" width="16"><span
                   style="vertical-align: middle; padding-left: 10px;">个人中心</span></a></li>
                 <li role="menuitem" tabindex="-1" class="el-menu-item_1" style="color: rgb(151, 155, 159);"><img
@@ -116,6 +116,11 @@
 
   export default {
     name: 'App',
+    data(){
+      return{
+        headstyle:""
+      }
+    },
     components: {},
     methods: {
       enter() {
@@ -142,5 +147,6 @@
     margin: 0px;
     padding: 0px;
   }
+
 
 </style>

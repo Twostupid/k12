@@ -21,6 +21,12 @@ export default new Router({
       name: 'home',
       component: (resolve) => require(['../components/yy/B/B_Yy_lgion.vue'],resolve)
     },
+    //付款
+    {
+      path: '/payment',
+      name: 'payment',
+      component: (resolve) => require(['../components/ey/B/B_ey_payment.vue'],resolve)
+    },
     //积木编程
 
     {
@@ -183,6 +189,21 @@ export default new Router({
           component: (resolve) => require(['../components/yy/C/C_Yy_message.vue'], resolve)
         },
 
+        {
+          path:'consume',
+          name:'consume',
+          component:(resolve) => require(['../components/dm/C/C_dm_consume.vue'], resolve)
+        },
+        {
+          path:'buyPay',
+          name:'buyPay',
+          component:(resolve) => require(['../components/dm/C/C_dm_buyPay.vue'], resolve)
+        },
+        {
+          path:'rechargeRecord',
+          name:'rechargeRecord',
+          component:(resolve) => require(['../components/dm/C/C_dm_rechargeRecord.vue'], resolve)
+        }
       ]
     },
 
