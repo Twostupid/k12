@@ -40,8 +40,8 @@
           <li><router-link to="/personal/password" active-class = "active">修改密码</router-link></li>
           <h2>账号管理</h2>
           <li><router-link to="/personal/message" active-class = "active">账户信息</router-link></li>
-          <li><router-link to="/personal/2" active-class = "active">账户充值</router-link></li>
-          <li><router-link to="/personal/3" active-class = "active">充值记录</router-link></li>
+          <li><router-link to="/personal/buyPay" active-class = "active">账户充值</router-link></li>
+          <li><router-link to="/personal/rechargeRecord" active-class = "active">充值记录</router-link></li>
           <li><router-link to="/personal/consume" active-class = "active">消费计录</router-link></li>
         </ul>
       </div>

@@ -176,6 +176,16 @@ export default new Router({
           path:'consume',
           name:'consume',
           component:(resolve) => require(['../components/dm/C/C_dm_consume.vue'], resolve)
+        },
+        {
+          path:'buyPay',
+          name:'buyPay',
+          component:(resolve) => require(['../components/dm/C/C_dm_buyPay.vue'], resolve)
+        },
+        {
+          path:'rechargeRecord',
+          name:'rechargeRecord',
+          component:(resolve) => require(['../components/dm/C/C_dm_rechargeRecord.vue'], resolve)
         }
       ]
     },
