@@ -1,5 +1,4 @@
 <template>
-
   <div class="wrap">
 
     <div data-v-002e6e64="" id="gameProgress">
@@ -77,7 +76,6 @@
     </div>
 
   </div>
-
 </template>
 
 <script>
