@@ -41,6 +41,7 @@ export default new Router({
       name: 'homep',
       component: (resolve) => require(['../components/ey/B/B_ey_home.vue'],resolve)
     },
+
     //新闻咨询123
     {
       path: '/news',
