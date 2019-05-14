@@ -6,9 +6,10 @@
             <div class="news_list_everyone" v-for="item in list">
               <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
               <div class="news_list_everyone_main">
-                <router-link to="/news/fouse">
-                <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
-                </router-link>
+
+                <p class="everyone_main_title" style="font-size: 1.5em"><router-link to="/fouse">{{item.name}}</router-link></p>
+
+
                 <span>{{item.time|moment}}</span>
               </div>
             </div>
