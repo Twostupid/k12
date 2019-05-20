@@ -60,11 +60,6 @@ export default new Router({
       component: (resolve) => require(['../components/dm/B/B_dm_news.vue'], resolve),
 
     },
-    {
-      path: '/fouse',
-      name: 'fouse',
-      component: (resolve) => require(['../components/dm/C/C_dm_fouse.vue'], resolve)
-    },
     //  忘记密码
     {
       path: '/forget',
