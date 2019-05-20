@@ -57,6 +57,13 @@ export default new Router({
       path: '/journalism',
       name: 'journalism',
       component: (resolve) => require(['../components/yy/D/D_Yy_journalism.vue'],resolve)
+      component: (resolve) => require(['../components/dm/B/B_dm_news.vue'], resolve),
+
+    },
+    {
+      path: '/fouse',
+      name: 'fouse',
+      component: (resolve) => require(['../components/dm/C/C_dm_fouse.vue'], resolve)
     },
     //  忘记密码
     {
