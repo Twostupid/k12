@@ -9,19 +9,18 @@
         <li data-target="#myCarousel" data-slide-to="3" class="noa" style="width: 30px;height: 2px"></li>
       </ol>
       <!-- 轮播（Carousel）项目 -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <img v-bind:src="list[0].img" v-bind:alt="list[0].alt">
-        </div>
-
-        <div class="item">
-          <img v-bind:src="list[1].img" v-bind:alt="list[0].alt">
+      <div class="carousel-inner" >
+        <div class="item active" v-for="">
+          <!--<img v-bind:src="/api/+list[0].image">-->
         </div>
         <div class="item">
-          <img v-bind:src="list[2].img" v-bind:alt="list[0].alt">
+          <!--<img v-bind:src="/api/+list[1].image">-->
         </div>
         <div class="item">
-          <img v-bind:src="list[3].img" v-bind:alt="list[0].alt">
+          <!--<img v-bind:src="/api/+list[2].image">-->
+        </div>
+        <div class="item">
+          <!--<img v-bind:src="/api/+list[3].image">-->
         </div>
 
 
@@ -272,8 +271,7 @@
         <div class="row">
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
             <div class="section-content">
-              <router-link to="/payment?number=0"><img src="http://yefengedu.com/static//images//v2.0/section1.png" width="380"
-                                       height="533" class="img-responsive taocanyi"></router-link>
+              <router-link to="/payment?number=0"><img src="http://yefengedu.com/static//images//v2.0/section1.png" width="380" height="533" class="img-responsive taocanyi"></router-link>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4 text-center">
@@ -328,13 +326,7 @@
     },
     data() {
       return {
-        list:[
-
-          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1108673879162884096',alt:'First slide'},
-          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1098788297024606208',alt:'Second slide'},
-          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1091516534293139456',alt:'Third slide'},
-          {img:'http://yf-code-images.oss-cn-beijing.aliyuncs.com/1086203092736806912',alt:'for slide'},
-        ],
+        list:"",
         active:'active',
         flag:false,
         swiperOption: {
@@ -348,8 +340,6 @@
             notNextTick: true,
             bulletClass: 'bullet-class',
             bulletActiveClass: 'bullet-active-class',
-
-
           },
           effect: 'coverflow',
           slidesPerView: 3,
@@ -391,13 +381,6 @@
 
 
     mounted() {
-      //这边就可以使用swiper这个对象或使用swiper官网中的方法
-      // var that=this;
-      // this.swiper.slideTo(0,0,false);
-      // //自动播放
-      // setInterval(function(){
-      //   that.swiper.slideNext()
-      // },2000)
       this.swiper.el.onmouseover = function () {
         this.swiper.autoplay.stop();
 
@@ -407,18 +390,24 @@
         }
     },
     methods:{
-      // getdata(){
-      //   this.$axios.get('/api/course/categories').then(res=> {
-      //     let dataone = res.data;
-      //     // console.log(dataone);
-      //     this.pagenumb = Number(dataone.data.length)/this.pagesize;
-      //     this.count = dataone.data.length
-      //   })
+      getdata(){
+        this.$axios.get('/api/carousels').then(res=> {
+          let dataone = res.data;
+          console.log(dataone);
+          this.list = dataone.data;
+        })
+      },
+      // wodemaye(){
+      //   this.$axios.get('/api/')
       // },
       video(){
         this.flag=!this.flag;
       }
+    },
+    mounted() {
+      // this.getdata();
     }
+
   }
 </script>
 
