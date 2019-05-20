@@ -10,6 +10,11 @@ export default new Router({
       path: '/',
      redirect: '/homep'
     },
+    {
+      path: '/knowledg',
+      name: 'knowledg',
+      component: (resolve) => require(['../components/yy/D/D_Yy_knowledg.vue'], resolve)
+    },
     //注册
     {
       path: '/register',
@@ -45,6 +50,13 @@ export default new Router({
     {
       path: '/news',
       name: 'news',
+      component: (resolve) => require(['../components/dm/B/B_dm_news.vue'], resolve),
+    },
+    //新闻四级页面
+    {
+      path: '/journalism',
+      name: 'journalism',
+      component: (resolve) => require(['../components/yy/D/D_Yy_journalism.vue'],resolve)
       component: (resolve) => require(['../components/dm/B/B_dm_news.vue'], resolve),
 
     },

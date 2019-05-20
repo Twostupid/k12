@@ -1,56 +1,53 @@
 <template>
-    <div class="news_all">
-      <div class="news_left">
-        <div class="news_list">
-
-            <div class="news_list_everyone" v-for="item in list">
-              <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
-              <div class="news_list_everyone_main">
-
-                <p class="everyone_main_title" style="font-size: 1.5em"><router-link to="/fouse">{{item.name}}</router-link></p>
-
-
-                <span>{{item.time|moment}}</span>
-              </div>
+  <div class="news_all">
+    <div class="news_left">
+      <div class="news_list">
+        <div class="news_list_everyone" v-for="item in list">
+          <router-link :to="{path: '/journalism', query: {ids:item.id}}">
+            <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
+            <div class="news_list_everyone_main">
+              <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
+              <span>{{item.time|moment}}</span>
             </div>
 
-
-        </div>
-        <div class="pager">
-          <span>共 {{count}} 条</span>&nbsp;
-          <div>
-            <select >
-              <option value="10" @click="jumppage(1,10)">10</option>
-              <option value="20" @click="jumppage(1,20)">20</option>
-              <option value="50" @click="jumppage(1,30)">30</option>
-            </select>
-            &nbsp;
-          </div>
-          <a @click="jumppage(1,10)" class="glyphicon glyphicon-menu-left" style="margin-top: 17px"></a>
-          <span v-for="item in pagenumb" @click="jumppage(item,10)">{{item}}</span>
-          <a @click="jumppage(2,10)" class="glyphicon glyphicon-menu-right" style="margin-top: 17px"></a>
-          <div class="goto">
-            前往&nbsp;&nbsp;<input type="text" @input="jumppage(pagenow,10)"/>&nbsp;&nbsp;页
-          </div>
-          </div>
-        </div>
-      <div class="news_right">
-        <img src="http://yefengedu.com/static/img/banner.3eee7fe.jpg" alt="">
-        <div class="news_right_title">
-          热门资讯
-        </div>
-        <div class="news_right_new" >
-          <router-link to="/">
-            <div class="news_right_new_small" v-for="(item, index) in list" v-if='index<5'>
-              <div class="new_small_father">
-                <span class="small_col">{{index+1}}</span>
-                <span class="small_title">{{item.name}}</span>
-              </div>
-            </div>
           </router-link>
         </div>
       </div>
+      <div class="pager">
+        <span>共 {{count}} 条</span>&nbsp;
+        <div>
+          <select>
+            <option value="10" @click="jumppage(1,10)">10</option>
+            <option value="20" @click="jumppage(1,20)">20</option>
+            <option value="50" @click="jumppage(1,30)">30</option>
+          </select>
+          &nbsp;
+        </div>
+        <a @click="jumppage(1,10)" class="glyphicon glyphicon-menu-left" style="margin-top: 17px"></a>
+        <span v-for="item in pagenumb" @click="jumppage(item,10)">{{item}}</span>
+        <a @click="jumppage(2,10)" class="glyphicon glyphicon-menu-right" style="margin-top: 17px"></a>
+        <div class="goto">
+          前往&nbsp;&nbsp;<input type="text" @input="jumppage(pagenow,10)"/>&nbsp;&nbsp;页
+        </div>
+      </div>
     </div>
+    <div class="news_right">
+      <img src="http://yefengedu.com/static/img/banner.3eee7fe.jpg" alt="">
+      <div class="news_right_title">
+        热门资讯
+      </div>
+      <div class="news_right_new">
+        <router-link to="/">
+          <div class="news_right_new_small" v-for="(item, index) in list" v-if='index<5'>
+            <div class="new_small_father">
+              <span class="small_col">{{index+1}}</span>
+              <span class="small_title">{{item.name}}</span>
+            </div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

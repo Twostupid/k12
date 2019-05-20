@@ -76,9 +76,7 @@
     </div>
 
   </div>
-
 </template>
-
 <script>
   export default {
     name: "C_Yy_progress",
