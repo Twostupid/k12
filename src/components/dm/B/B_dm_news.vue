@@ -65,7 +65,6 @@
           getdata(){
             this.$axios.get('/api/course/categories').then(res=> {
               let dataone = res.data;
-              // console.log(dataone);
               this.pagenumb = Number(dataone.data.length)/this.pagesize;
               this.count = dataone.data.length
             })
@@ -77,7 +76,6 @@
               this.pagenow++;
             }
             this.$axios.get('/api/course/categories?page='+this.pagenow+'&size='+this.pagesize+'').then(res=>{
-              console.log(res.data.data);
               this.list = res.data.data
             })
           },
