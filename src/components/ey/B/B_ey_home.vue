@@ -15,13 +15,13 @@
         </div>
 
         <div class="item">
-          <img v-bind:src="list[1].img" v-bind:alt="list[0].alt">
+          <img style="width:100%;height: 100%" v-bind:src="list[1].img" v-bind:alt="list[0].alt">
         </div>
         <div class="item">
-          <img v-bind:src="list[2].img" v-bind:alt="list[0].alt">
+          <img style="width:100%;height: 100%" v-bind:src="list[2].img" v-bind:alt="list[0].alt">
         </div>
         <div class="item">
-          <img v-bind:src="list[3].img" v-bind:alt="list[0].alt">
+          <img  style="width:100%;height: 100%" v-bind:src="list[3].img" v-bind:alt="list[0].alt">
         </div>
 
 
@@ -422,7 +422,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 
 
   　　

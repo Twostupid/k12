@@ -63,9 +63,9 @@
         </nav>
       </div>
     </header>
-    <router-link to="/home"></router-link>
+    <!--<router-link to="/home"></router-link>-->
 
-    <router-link to="/building"></router-link>
+    <!--<router-link to="/building"></router-link>-->
     <router-view></router-view>
     <footer class="footer container">
       <div class="container-1200">

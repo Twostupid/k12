@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div style="background: rgb(247, 243, 243); overflow: hidden; min-height: 117px;">
     <div class="pay-container">
       <div class="head-title">1.选择套餐类型</div>
@@ -6,22 +7,26 @@
         <a class="member member-gold" v-for="(item,index) in plist" :class="{active:changeOrange==index}" @click="oran(index,item.price)">
         <div class="title">{{item.ptitle}}</div>
         <div class="price"><!----> <em >{{item.price}}</em> 元</div>
-          <sapn class="glyphicon glyphicon-ok" aria-hidden="true" style="color:white;z-index: 99999;position: absolute;top: 5px;left: 213px;width: 18px;width: 18px;font-size: 16px"></sapn>
+          <div class="glyphicon glyphicon-ok"  style="color:white;z-index: 99999;position: absolute;top: 5px;left: 213px;width: 18px;width: 18px;font-size: 16px"></div>
         <div class="desc">{{item.con}}</div>
         </a>
       </div>
       <div class="head-title">2.选择付款方式</div>
-      <div role="radiogroup" class="el-radio-group pay-channel"><label
-        role="radio" tabindex="0"
-        class="el-radio"><span
-        class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" tabindex="-1"
-                                                                            class="el-radio__original"
-                                                                            value="wxpay"></span><span
-        class="el-radio__label"><img src="http://yefengedu.com//static/img/wlogo.0980c80.png">微信支付<!----></span></label>
-        <label role="radio" tabindex="-1" class="el-radio"><span class="el-radio__input"><span
-          class="el-radio__inner"></span><input type="radio" tabindex="-1" class="el-radio__original"
-                                                value="alipay"></span><span class="el-radio__label"><img
-          src="http://yefengedu.com/static/img/alogo.16d43cd.png">支付宝<!----></span></label></div>
+      <div role="radiogroup" class="el-radio-group pay-channel">
+        <template>
+          <el-radio v-model="radio" label="1"><img src="http://yefengedu.com//static/img/wlogo.0980c80.png">微信支付</el-radio>
+          <el-radio v-model="radio" label="2"><img src="http://yefengedu.com/static/img/alogo.16d43cd.png">支付宝</el-radio>
+          </template>
+          <!--<label role="radio" tabindex="0" class="el-radio">-->
+          <!--<span class="el-radio__input"><span class="el-radio__inner"></span>-->
+            <!--<input type="radio" tabindex="-1" class="el-radio__original" value="wxpay">-->
+          <!--</span>-->
+          <!--<span class="el-radio__label"><img src="http://yefengedu.com//static/img/wlogo.0980c80.png">微信支付&lt;!&ndash;&ndash;&gt;</span></label>-->
+        <!--<label role="radio" tabindex="-1" class="el-radio"><span class="el-radio__input"><span-->
+          <!--class="el-radio__inner"></span><input type="radio" tabindex="-1" class="el-radio__original"-->
+                                                <!--value="alipay"></span><span class="el-radio__label"><img-->
+          <!--src="http://yefengedu.com/static/img/alogo.16d43cd.png">支付宝&lt;!&ndash;&ndash;&gt;</span></label>-->
+      </div>
       <div class="head-title">3.确定后付款</div>
       <div class="footer">
         <div class="bill">应付金额：<span class="price"><em
@@ -39,6 +44,7 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -46,6 +52,8 @@
     name: "B_ey_payment",
     data(){
       return{
+        radio: '',
+
         plist:[
           {"ptitle":'基础算法',"price":'88',"con":"积木编程基础知识30课时（含教学视频）"},
           {"ptitle":'进阶知识',"price":'388',"con":"积木编程基础知识+进阶知识80课时（含教学视频）"},
@@ -267,4 +275,8 @@
     border: solid 2px #ff470a;
   }
 
+  .el-radio__input.is-checked .el-radio__inner {
+    border-color: #409EFF;
+    background: #409EFF;
+  }
 </style>

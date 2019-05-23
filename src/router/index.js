@@ -57,7 +57,7 @@ export default new Router({
       path: '/journalism',
       name: 'journalism',
       component: (resolve) => require(['../components/yy/D/D_Yy_journalism.vue'],resolve)
-      component: (resolve) => require(['../components/dm/B/B_dm_news.vue'], resolve),
+
 
     },
     {

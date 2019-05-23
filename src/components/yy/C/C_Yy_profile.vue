@@ -118,7 +118,7 @@
           // console.log("_____",this.url)
           // console.log("@@@@@@:  ",this.headerImage)
           // console.log("22222:   ",this.cropper)
-          this.$axios.post('/api//upload/image',this.url)
+          this.$axios.post('/api/upload/image',this.url)
             .then(res=> {
               console.log("21321322@@@: ",res.data)
               alert("成功")
