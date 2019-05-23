@@ -10,24 +10,16 @@
     </div>
     <div class="head-title">2.选择付款方式</div>
     <div class="el-radio-group pay-channel">
-      <label tabindex="0" class="el-radio">
-        <span class="el-radio__input">
-          <span class="el-radio__inner">
-          </span>
-          <input type="radio" tabindex="-1" class="el-radio__original" value="wxpay">
-        </span>
-        <span class="el-radio__label">
-          <img src="http://yefengedu.com/static/img/wlogo.0980c80.png" class="payimg">微信支付
-        </span></label>
-      <label role="radio" tabindex="-1" class="el-radio">
-        <span class="el-radio__input">
-          <span class="el-radio__inner"></span>
-          <input type="radio" tabindex="-1" class="el-radio__original" value="alipay">
-        </span>
-        <span class="el-radio__label">
+
+      <template>
+        <el-radio v-model="radio" label="1">
+          <img src="http://yefengedu.com//static/img/wlogo.0980c80.png" class="payimg">微信支付
+        </el-radio>
+        <el-radio v-model="radio" label="2">
           <img src="http://yefengedu.com/static/img/alogo.16d43cd.png" class="payimg">支付宝
-        </span>
-      </label>
+        </el-radio>
+      </template>
+
     </div>
     <div class="head-title">3.确定后付款</div>
     <div class="payfooter">
@@ -50,6 +42,7 @@
             {id:5,numb:"800"},
             {id:6,numb:"1000"},
           ],
+          radio:'',
           isActive:false,
           money:"100"
         }

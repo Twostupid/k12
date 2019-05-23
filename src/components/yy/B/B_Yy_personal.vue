@@ -138,7 +138,7 @@
     margin-left: 30px;
   }
   .juan :after{
-    content: "12131";
+    content: "";
     width: 41px;
     height: 16px;
     /*margin-left: 40px;*/

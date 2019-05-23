@@ -3,13 +3,12 @@
     <div class="news_left">
       <div class="news_list">
         <div class="news_list_everyone" v-for="item in list">
-          <router-link :to="{path: '/journalism', query: {ids:item.id}}">
+          <router-link :to="{path:'/journalism', query: {ids:item.id}}">
             <img v-bind:src="item.cover" class="news_list_everyone_img" alt="">
             <div class="news_list_everyone_main">
               <p class="everyone_main_title" style="font-size: 1.5em">{{item.name}}</p>
               <span>{{item.time|moment}}</span>
             </div>
-
           </router-link>
         </div>
       </div>
@@ -66,7 +65,6 @@
           getdata(){
             this.$axios.get('/api/course/categories').then(res=> {
               let dataone = res.data;
-              // console.log(dataone);
               this.pagenumb = Number(dataone.data.length)/this.pagesize;
               this.count = dataone.data.length
             })
@@ -78,7 +76,6 @@
               this.pagenow++;
             }
             this.$axios.get('/api/course/categories?page='+this.pagenow+'&size='+this.pagesize+'').then(res=>{
-              console.log(res.data.data);
               this.list = res.data.data
             })
           },
