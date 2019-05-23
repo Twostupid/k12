@@ -132,11 +132,6 @@
                 this.time();
 
               }
-
-
-
-
-
             }else{
               this.ming="请获取验证码";
               this.boor=true;
@@ -250,15 +245,14 @@
     border: 1px solid #f1f1f1;
 
   }
-  haomas{
-    background-color: greenyellow;
+  .haomas{
+    background-color: gray;
   }
   .haomeds{
     position: absolute;
     width: 30%;
-    line-height: 37px;
+    line-height: 41px;
     border: none;
-
     font-size: 14px;
     text-align: center;
     color: #ffffff;

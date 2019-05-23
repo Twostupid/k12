@@ -226,7 +226,7 @@
   .haoma{
     position: absolute;
     width: 30%;
-    line-height: 37px;
+    line-height: 41px;
     border: none;
     background: #E51C23;
     font-size: 14px;

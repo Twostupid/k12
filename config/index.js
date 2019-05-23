@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://172.16.30.123:8012/',//代理地址
+        target: 'http://172.16.16.80:8080/',//代理地址
         changeOrigin: true,//是否允许开启代理
         pathRewrite: {//代理地址重写
           '^/api': ''
@@ -23,7 +23,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free yy will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

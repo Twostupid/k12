@@ -1,7 +1,7 @@
 <template>
     <div class="buildingall">
       <header>
-        <img src="../../static/img/banner.a5807c4.png" class="header_img">
+        <img src="../../../../static/img/banner.a5807c4.png" class="header_img">
       </header>
       <div class="main_up">
 
@@ -15,8 +15,9 @@
         </div>
 
         <div class="right">
+
           <div class="cuboid" v-for="item in list2">
-            <a href="">
+            <router-link :to="{path:'/knowledg', query: {ids:item.img}}">
               <img v-bind:src="item.img" alt="" class="left_img">
               <div class="right_main">
                 <div class="logo_title">
@@ -25,7 +26,7 @@
                 </div>
                 <p class="schema">{{item.main}}</p>
               </div>
-            </a>
+            </router-link>
 
           </div>
         </div>

@@ -21,11 +21,8 @@
         <input ref="filElem" type="file" id="change" accept="image" @change="change">
         <label for="change"></label>
       </div>
-
     </div>
-
   </div>
-
 </template>
 <script>
   import Cropper from 'cropperjs'
@@ -51,7 +48,7 @@
           viewMode: 1,
           background:false,
           zoomable:false,
-          ready: function () {
+          ready:function () {
             self.croppable = true;
           }
         });
@@ -59,7 +56,7 @@
         component: {},
       methods: {
           tu(){
-            console.log(1213)
+
             this.$refs.filElem.dispatchEvent(new MouseEvent('click'))
           },
         getObjectURL(file) {
@@ -72,7 +69,6 @@
           } else if (window.webkitURL != undefined) { // webkit or chrome
             url = window.webkitURL.createObjectURL(file);
           }
-
           return url;
         },
         change(e) {
@@ -80,18 +76,15 @@
           if (!files.length) return;
           this.panel = true;
           this.picValue = files[0];
-
           this.url = this.getObjectURL(this.picValue);
           //每次替换图片要重新得到新的url
           if (this.cropper) {
             this.cropper.replace(this.url);
           }
           this.panel = true;
-
         },
         crop() {
-            console.log(this.url)
-          this.$router.push({path:'/personal/profile', query: {num:this.url}})
+          // this.$router.push({path:'/personal/profile', query: {num:this.url}})
           this.panel = false;
           var croppedCanvas;
           var roundedCanvas;
@@ -102,40 +95,39 @@
           croppedCanvas = this.cropper.getCroppedCanvas();
           // Round
           roundedCanvas = this.getRoundedCanvas(croppedCanvas);
-
-          this.headerImage = roundedCanvas.toDataURL();
+          this.headerImage = croppedCanvas;
           this.postImg()
-
         },
         getRoundedCanvas(sourceCanvas) {
-
           var canvas = document.createElement('canvas');
           var context = canvas.getContext('2d');
           var width = sourceCanvas.width;
           var height = sourceCanvas.height;
-
           canvas.width = width;
           canvas.height = height;
-
           context.imageSmoothingEnabled = true;
           context.drawImage(sourceCanvas, 0, 0, width, height);
           context.globalCompositeOperation = 'destination-in';
           context.beginPath();
-          context.arc(width / 2, height / 2, Math.min(width, height) / 2, 0, 2 * Math.PI, true);
-          context.fill();
-
+          context.arc(width / 2, height / 2, Math.min(width,height) / 2, 0, 2 * Math.PI, true);
+          // context.fill();
           return canvas;
         },
         postImg() {
           //这边写图片的上传
-
+          // console.log("_____",this.url)
+          // console.log("@@@@@@:  ",this.headerImage)
+          // console.log("22222:   ",this.cropper)
+          this.$axios.post('/api//upload/image',this.url)
+            .then(res=> {
+              console.log("21321322@@@: ",res.data)
+              alert("成功")
+          })
 
         }
-
       }
     }
 </script>
-
 <style>
   .zis{
     text-align: center;
@@ -159,7 +151,7 @@
     width: 100%;
     height: 140px;
     /*background-color: greenyellow;*/
-    background-image: url("../../static/img/1img.png");
+    background-image: url("../../../../static/img/1img.png");
     background-size: 100% 100%;
   }
   .num2 img{
