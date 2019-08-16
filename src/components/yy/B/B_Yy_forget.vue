@@ -315,7 +315,7 @@
     background-color: greenyellow;
     opacity: 0.5;
     position: absolute;
-    top: -40px;
+    top: 50px;
     left: 50%;
     margin-left:-175px;
     z-index: 10;

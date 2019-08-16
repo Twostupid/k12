@@ -75,7 +75,9 @@
       watch:{
         $route(to,from){
 
-          this.url=this.$route.query.num
+          this.url=this.$route.query.num;
+          console.log(to);
+
         }
       }
 
